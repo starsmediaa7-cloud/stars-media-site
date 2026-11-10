@@ -3,10 +3,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..900;1,14..32,400..900&display=swap">
 <style>
-/* Layout: full-bleed colour bands (ink / cobalt / volt / bone) like the motion's scene cuts; heavy italic display type does the shouting, everything else stays quiet. Single dark look by design. */
+/* Layout: full-bleed colour bands (ink / wine / beige / cream) like the motion's scene cuts; heavy italic display type does the shouting, everything else stays quiet. Single dark look by design. */
 :root{
-  --ink:#0B0B10; --ink-2:#15151d; --line:#2a2a38;
-  --cob:#2B3BFF; --cob-d:#1C25C9; --volt:#D4FF3C; --bone:#F3EFE7; --mute:#9b99a8;
+  --ink:#1C1C1C; --ink-2:#252323; --line:#3a3434;
+  --cob:#72021C; --cob-d:#4E0113; --volt:#ECD3B5; --bone:#F8F1E8; --mute:#a89d93;
   --f-display:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
   --gut:max(16px,env(safe-area-inset-left,0px));
@@ -54,7 +54,7 @@ header .pill{background:var(--volt);color:var(--ink);font-size:13px}
 .hero h1 .strike::after{content:"";position:absolute;left:-3%;right:-3%;top:52%;height:.12em;background:var(--cob);transform:rotate(-4deg) scaleX(0);transform-origin:left;animation:strike .5s .9s cubic-bezier(.7,0,.3,1) forwards}
 @keyframes rise{from{transform:translateY(105%)}to{transform:none}}
 @keyframes strike{to{transform:rotate(-4deg) scaleX(1)}}
-.hero p.lead{max-width:34ch;font-size:clamp(17px,1.6vw,20px);color:#d9d6cf;margin:28px 0 30px}
+.hero p.lead{max-width:34ch;font-size:clamp(17px,1.6vw,20px);color:#e2d6c8;margin:28px 0 30px}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
 .btn.volt{background:var(--volt);color:var(--ink);font-size:16px;padding:.8em 1.3em}
 .btn.ghost{background:transparent;color:var(--bone);border:2px solid var(--bone);font-size:16px;padding:.7em 1.2em}
@@ -144,9 +144,9 @@ header .pill{background:var(--volt);color:var(--ink);font-size:13px}
 /* plans */
 .plans{background:var(--cob)}
 .plans .wrap{padding-block:96px}
-.plans .section-head p{color:#dfe2ff}
+.plans .section-head p{color:#f3d9c4}
 .cur{display:inline-flex;background:var(--cob-d);border-radius:999px;padding:4px}
-.cur button{background:none;border:0;color:#dfe2ff;font:700 13px var(--f-body);letter-spacing:.08em;padding:8px 14px;border-radius:999px;cursor:pointer}
+.cur button{background:none;border:0;color:#f3d9c4;font:700 13px var(--f-body);letter-spacing:.08em;padding:8px 14px;border-radius:999px;cursor:pointer}
 .cur button[aria-pressed="true"]{background:var(--bone);color:var(--ink)}
 .plan-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:center}
 @media (max-width:900px){.plan-grid{grid-template-columns:minmax(0,1fr)}.plan.mid{order:-1}}
@@ -159,10 +159,10 @@ header .pill{background:var(--volt);color:var(--ink);font-size:13px}
 .price small{font-size:15px;opacity:.7}
 .plan ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
 .plan li{display:grid;grid-template-columns:26px minmax(0,1fr);gap:10px;align-items:start;font-size:15.5px}
-.plan li::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--bone) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%230B0B10' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/70% no-repeat;margin-top:1px}
-.plan.mid li::before{background-color:var(--ink);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23D4FF3C' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.plan li::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--bone) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%231C1C1C' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/70% no-repeat;margin-top:1px}
+.plan.mid li::before{background-color:var(--ink);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23ECD3B5' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
 .plan li.hl{background:var(--ink);color:var(--volt);border-radius:12px;padding:8px 10px;margin:-8px -10px}
-.plan li.hl::before{background-color:var(--volt);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%230B0B10' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.plan li.hl::before{background-color:var(--volt);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%231C1C1C' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
 .plan .btn{align-self:flex-start;margin-top:auto}
 .plan .btn.dark{background:var(--ink);color:var(--volt);font-size:15px;padding:.85em 1.3em}
 .plan .btn.line{background:transparent;color:var(--bone);border:2px solid var(--bone);font-size:14px;padding:.7em 1.1em}
@@ -180,7 +180,7 @@ form.msg label{display:flex;flex-direction:column;gap:6px;font:600 12px var(--f-
 form.msg input,form.msg select{background:var(--ink-2);color:var(--bone);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font:500 16px var(--f-body);width:100%}
 form.msg .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media (max-width:420px){form.msg .row{grid-template-columns:1fr}}
-form.msg output{display:block;background:var(--ink-2);border:1px dashed #3b3b52;border-radius:12px;padding:12px 14px;font-size:14.5px;line-height:1.5;color:#e7e4dc;white-space:pre-wrap}
+form.msg output{display:block;background:var(--ink-2);border:1px dashed #4a3c3c;border-radius:12px;padding:12px 14px;font-size:14.5px;line-height:1.5;color:#efe4d6;white-space:pre-wrap}
 form.msg .status{font-size:13px;color:var(--volt);min-height:1em}
 
 .chan{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-direction:column;gap:10px;max-width:460px}
@@ -222,7 +222,7 @@ nav.links a.on,.mnav a.on{color:var(--volt)}
 .page-head{border-bottom:1px solid var(--line);background:radial-gradient(circle at 85% 10%,color-mix(in srgb,var(--cob) 45%,transparent),transparent 55%),var(--ink)}
 .page-head .wrap{padding-block:40px 48px}
 .page-head h1{font-size:clamp(52px,9vw,128px);margin-top:16px}
-.lead2{max-width:52ch;color:#d9d6cf;font-size:18px;margin:20px 0 0}
+.lead2{max-width:52ch;color:#e2d6c8;font-size:18px;margin:20px 0 0}
 .back{color:var(--mute);text-decoration:none;font:600 13px var(--f-body);letter-spacing:.1em;text-transform:uppercase}
 .back:hover{color:var(--volt)}
 .tabs{display:inline-flex;gap:6px;margin-top:28px;background:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:4px;flex-wrap:wrap}
@@ -255,7 +255,7 @@ nav.links a.on,.mnav a.on{color:var(--volt)}
 .acard.sq img{aspect-ratio:1}
 .acard.fourfive img{aspect-ratio:4/5}
 .acard span{font:600 13px var(--f-body);padding:12px 14px}
-.lb{position:fixed;inset:0;z-index:50;background:rgba(5,5,10,.92);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb{position:fixed;inset:0;z-index:50;background:rgba(20,18,18,.92);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
 .lb img{max-width:min(92vw,720px);max-height:86vh;border-radius:16px}
 .lb-x{position:absolute;top:calc(env(safe-area-inset-top,0px) + 16px);right:calc(env(safe-area-inset-right,0px) + 16px);background:var(--volt);color:var(--ink);border:0;border-radius:999px;padding:10px 16px;font:italic 900 14px var(--f-display);text-transform:uppercase;cursor:pointer}
 .athletes .wrap{padding-block:48px 96px}
@@ -282,6 +282,14 @@ nav.links a.on,.mnav a.on{color:var(--volt)}
 .atcard.join .btn.dark{background:var(--ink);color:var(--volt);align-self:flex-start;font-size:14px;padding:.8em 1.2em}
 
 /* review fixes */
+.avulsos{margin-top:56px;border-top:1px solid color-mix(in srgb,var(--bone) 25%,transparent);padding-top:36px;display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:24px 56px}
+.av-head h3{font-size:clamp(30px,3.4vw,44px)}
+.av-head p{margin:10px 0 0;color:color-mix(in srgb,var(--bone) 80%,transparent)}
+#av-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 28px}
+#av-list li{display:flex;align-items:baseline;gap:12px;padding:14px 0;border-bottom:1px solid color-mix(in srgb,var(--bone) 18%,transparent)}
+#av-list li span{flex:1;min-width:0}
+#av-list li b{font:italic 900 22px var(--f-display);color:var(--volt);white-space:nowrap}
+@media (max-width:900px){.avulsos{grid-template-columns:minmax(0,1fr)}#av-list{grid-template-columns:minmax(0,1fr)}}
 .disp{line-height:.95}
 .manifesto .stack .o{color:var(--bone);-webkit-text-stroke:.05em var(--ink);paint-order:stroke fill}
 .contact h2{font-size:clamp(40px,5.6vw,84px);line-height:1}
@@ -390,9 +398,9 @@ footer .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px 40px
         </article>
         <article class="pcard pc3">
           <div class="vis chart"><svg viewBox="0 0 300 140" preserveAspectRatio="none" aria-hidden="true">
-            <g fill="#F3EFE7" opacity=".25"><circle cx="20" cy="20" r="2"/><circle cx="70" cy="20" r="2"/><circle cx="120" cy="20" r="2"/><circle cx="170" cy="20" r="2"/><circle cx="220" cy="20" r="2"/><circle cx="270" cy="20" r="2"/><circle cx="20" cy="70" r="2"/><circle cx="70" cy="70" r="2"/><circle cx="120" cy="70" r="2"/><circle cx="170" cy="70" r="2"/><circle cx="220" cy="70" r="2"/><circle cx="270" cy="70" r="2"/><circle cx="20" cy="120" r="2"/><circle cx="70" cy="120" r="2"/><circle cx="120" cy="120" r="2"/><circle cx="170" cy="120" r="2"/><circle cx="220" cy="120" r="2"/><circle cx="270" cy="120" r="2"/></g>
-            <polyline points="14,124 70,96 112,108 168,62 214,72 284,14" fill="none" stroke="#D4FF3C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
-            <g fill="#D4FF3C"><circle cx="70" cy="96" r="8"/><circle cx="168" cy="62" r="8"/><circle cx="284" cy="14" r="9"/></g></svg></div>
+            <g fill="#F8F1E8" opacity=".25"><circle cx="20" cy="20" r="2"/><circle cx="70" cy="20" r="2"/><circle cx="120" cy="20" r="2"/><circle cx="170" cy="20" r="2"/><circle cx="220" cy="20" r="2"/><circle cx="270" cy="20" r="2"/><circle cx="20" cy="70" r="2"/><circle cx="70" cy="70" r="2"/><circle cx="120" cy="70" r="2"/><circle cx="170" cy="70" r="2"/><circle cx="220" cy="70" r="2"/><circle cx="270" cy="70" r="2"/><circle cx="20" cy="120" r="2"/><circle cx="70" cy="120" r="2"/><circle cx="120" cy="120" r="2"/><circle cx="170" cy="120" r="2"/><circle cx="220" cy="120" r="2"/><circle cx="270" cy="120" r="2"/></g>
+            <polyline points="14,124 70,96 112,108 168,62 214,72 284,14" fill="none" stroke="#ECD3B5" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+            <g fill="#ECD3B5"><circle cx="70" cy="96" r="8"/><circle cx="168" cy="62" r="8"/><circle cx="284" cy="14" r="9"/></g></svg></div>
           <h3 class="disp" data-i18n-html="p3.t"></h3><p data-i18n="p3.d"></p>
         </article>
       </div>
@@ -406,7 +414,7 @@ footer .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px 40px
         <article class="svc"><div class="thumb t-video"><i></i></div><div><h3 class="disp" data-i18n="s2.t"></h3><p data-i18n="s2.d"></p></div></article>
         <article class="svc"><div class="thumb t-grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div><h3 class="disp" data-i18n="s3.t"></h3><p data-i18n="s3.d"></p></div></article>
         <article class="svc"><div class="thumb t-badge"><b><span class="mark"></span></b></div><div><h3 class="disp" data-i18n="s4.t"></h3><p data-i18n="s4.d"></p></div></article>
-        <article class="svc"><div class="thumb t-pen"><svg viewBox="0 0 150 118" aria-hidden="true"><path d="M18 98 C45 106 58 34 86 48 S122 22 136 20" fill="none" stroke="#0B0B10" stroke-width="5" stroke-linecap="round"/><path d="M58 34 L86 48 L114 62" stroke="#2B3BFF" stroke-width="1.6" fill="none"/><circle cx="58" cy="34" r="4" fill="#2B3BFF"/><circle cx="114" cy="62" r="4" fill="#2B3BFF"/><rect x="80" y="42" width="12" height="12" fill="#F3EFE7" stroke="#2B3BFF" stroke-width="2.4"/><rect x="12" y="92" width="12" height="12" fill="#F3EFE7" stroke="#2B3BFF" stroke-width="2.4"/></svg></div><div><h3 class="disp" data-i18n="s5.t"></h3><p data-i18n="s5.d"></p></div></article>
+        <article class="svc"><div class="thumb t-pen"><svg viewBox="0 0 150 118" aria-hidden="true"><path d="M18 98 C45 106 58 34 86 48 S122 22 136 20" fill="none" stroke="#1C1C1C" stroke-width="5" stroke-linecap="round"/><path d="M58 34 L86 48 L114 62" stroke="#72021C" stroke-width="1.6" fill="none"/><circle cx="58" cy="34" r="4" fill="#72021C"/><circle cx="114" cy="62" r="4" fill="#72021C"/><rect x="80" y="42" width="12" height="12" fill="#F8F1E8" stroke="#72021C" stroke-width="2.4"/><rect x="12" y="92" width="12" height="12" fill="#F8F1E8" stroke="#72021C" stroke-width="2.4"/></svg></div><div><h3 class="disp" data-i18n="s5.t"></h3><p data-i18n="s5.d"></p></div></article>
         <article class="svc"><div class="t-wrap"><div class="thumb t-ht" style="position:absolute;inset:0"></div><b>+248%</b></div><div><h3 class="disp" data-i18n="s6.t"></h3><p data-i18n="s6.d"></p></div></article>
       </div>
       <div class="more"><a class="pill btn volt" href="#portfolio" data-i18n="hero.cta2"></a></div>
@@ -427,24 +435,28 @@ footer .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px 40px
       <div class="plan-grid">
         <article class="plan">
           <h3 class="disp" data-plan-name="0"></h3>
-          <div class="price"><b data-p="0"></b><small data-i18n="per"></small></div>
+          <div class="price"><b data-p="0"></b><small data-per="0"></small></div>
           <ul data-feats="0"></ul>
           <a class="pill btn line" href="#contato" data-pick="0"></a>
         </article>
+        <article class="plan">
+          <h3 class="disp" data-plan-name="1"></h3>
+          <div class="price"><b data-p="1"></b><small data-per="1"></small></div>
+          <ul data-feats="1"></ul>
+          <a class="pill btn line" href="#contato" data-pick="1"></a>
+        </article>
         <article class="plan mid">
           <span class="pill rec" data-i18n="rec"></span>
-          <h3 class="disp" data-plan-name="1"></h3>
-          <div class="price"><b data-p="1"></b><small data-i18n="per"></small></div>
-          <div class="diff" id="diff"></div>
-          <ul data-feats="1"></ul>
-          <a class="pill btn dark" href="#contato" data-pick="1"></a>
-        </article>
-        <article class="plan">
           <h3 class="disp" data-plan-name="2"></h3>
-          <div class="price"><b data-p="2"></b><small data-i18n="per"></small></div>
+          <div class="price"><b data-p="2"></b><small data-per="2"></small></div>
+          <div class="diff" id="diff"></div>
           <ul data-feats="2"></ul>
-          <a class="pill btn line" href="#contato" data-pick="2"></a>
+          <a class="pill btn dark" href="#contato" data-pick="2"></a>
         </article>
+      </div>
+      <div class="avulsos">
+        <div class="av-head"><h3 class="disp" data-i18n="av.t"></h3><p data-i18n="av.d"></p></div>
+        <ul id="av-list"></ul>
       </div>
     </div>
   </section>
@@ -542,11 +554,11 @@ footer .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px 40px
 const WA = '5562981112025';
 const I18N = {
 br: {
-  'lang.label': 'Idioma', 'nav.services': 'Serviços', 'nav.plans': 'Planos', 'nav.portfolio': 'Portfólio', 'nav.athletes': 'Atletas', 'nav.contact': 'Contato',
-  'cta.whatsapp': 'Fale no WhatsApp', 'wa.hello': 'Olá, Stars Media! Quero saber mais sobre os planos.',
+  'lang.label': 'Idioma', 'nav.services': 'Serviços', 'nav.plans': 'Pacotes', 'nav.portfolio': 'Portfólio', 'nav.athletes': 'Atletas', 'nav.contact': 'Contato',
+  'cta.whatsapp': 'Fale no WhatsApp', 'wa.hello': 'Olá, Stars Media! Quero saber mais sobre os pacotes.',
   'hero.eyebrow': 'Agência de marketing esportivo', 'hero.l1': 'Talento', 'hero.l2': 'não basta.', 'hero.l3': 'Seja visto.',
   'hero.lead': 'Construímos a imagem de atletas com design criativo, conteúdo esportivo profissional e estratégia digital.',
-  'hero.cta1': 'Ver planos →', 'hero.cta2': 'Ver portfólio', 'badge': 'Seu talento • Sua história • Seu momento de brilhar •',
+  'hero.cta1': 'Ver pacotes →', 'hero.cta2': 'Ver portfólio', 'badge': 'Seu talento • Sua história • Seu momento de brilhar •',
   'ticker': ['Dia de jogo', 'Melhores momentos', 'Redes sociais', 'Branding pessoal', 'Design criativo', 'Estratégia digital'],
   'man.eyebrow': 'Por que existimos', 'man.text': 'Na Stars Media, acreditamos que todo atleta merece ser visto, reconhecido e valorizado. Sua carreira merece mais do que reconhecimento dentro de campo.',
   'man.w1': 'Visto.', 'man.w2': 'Reconhecido.', 'man.w3': 'Valorizado.',
@@ -560,19 +572,19 @@ br: {
   's4.t': 'Branding pessoal', 's4.d': 'Monograma, cores e tipografia que transformam seu nome em marca.',
   's5.t': 'Design criativo', 's5.d': 'Artes personalizadas, incluindo peças animadas para os momentos que pedem movimento.',
   's6.t': 'Estratégia digital', 's6.d': 'Marketing esportivo pensado para crescer seu alcance de forma consistente.',
-  'plans.title': 'Três planos.<br><span style="color:var(--volt)">Três formas de se destacar.</span>', 'plans.sub': 'Escolha o que combina com as suas ambições. Todos com publicação de boas-vindas.',
-  'per': '/mês', 'rec': '★ Recomendado', 'names': ['Essencial', 'Rendimento', 'Elite'],
-  'picks': ['Escolher Essencial', 'Quero o Rendimento →', 'Escolher Elite'],
-  'feats': [['3 artes esportivas personalizadas', 'Publicação de boas-vindas', 'Marketing esportivo para fortalecer sua presença digital'],
-            ['4 artes personalizadas', 'Publicação de boas-vindas', 'Vídeo curto de melhores momentos', 'Marketing esportivo'],
-            ['6 artes personalizadas, 2 delas animadas', 'Publicação de boas-vindas', 'Vídeos curtos e longos de melhores momentos', 'Suporte dedicado']],
-  'diff': d => `Só +${d}/mês vs Essencial, já com vídeo`,
+  'plans.title': 'Três pacotes.<br><span style="color:var(--volt)">Do primeiro jogo à temporada inteira.</span>', 'plans.sub': 'Pagamento único, sem mensalidade. Todos com gestão de marketing esportivo.',
+  'per': ['/pacote', '/pacote', '/temporada'], 'rec': '★ Recomendado', 'names': ['Estreia', 'Destaque', 'Temporada'],
+  'picks': ['Escolher Estreia', 'Escolher Destaque', 'Quero a Temporada →'],
+  'feats': [['Post de boas-vindas (feed + story)', 'Gestão de marketing esportivo', '3 artes de dia de jogo'],
+            ['Gestão de marketing esportivo', '4 artes de dia de jogo', '2 artes de resultado ou estatística', '1 vídeo curto de melhores momentos (até 60s)'],
+            ['Post de boas-vindas', 'Gestão de marketing esportivo a temporada toda', 'Arte de dia de jogo para todas as partidas', 'Arte de resultado em cada jogo de destaque', '2 vídeos completos de melhores momentos, um por semestre', 'Motion de apresentação do atleta', 'Atendimento prioritário pelo WhatsApp']],
+  'diff': 'À vista ou parcelado · temporada inteira coberta', 'av.t': 'Itens avulsos', 'av.d': 'Precisa de uma peça só? Peça separado.', 'av.items': ['Arte de dia de jogo', 'Arte de resultado ou estatística', 'Post de boas-vindas (feed + story)', 'Vídeo curto de melhores momentos (até 60s)', 'Vídeo completo de melhores momentos', 'Motion de apresentação do atleta'],
   'ct.eyebrow': 'Vamos começar', 'ct.title': 'Faça seu talento <span class="c">impossível de ignorar.</span>',
   'ct.text': 'Preencha os dados ao lado e envie a mensagem pronta pelo WhatsApp ou pelo Direct. Se preferir, fale com a gente por um destes canais:',
-  'copy': 'Copiar', 'copied': 'Copiado', 'f.name': 'Seu nome', 'f.name.ph': 'Ex.: Rafael Souza', 'f.sport': 'Modalidade', 'f.sport.ph': 'Ex.: Futebol, atacante', 'f.plan': 'Plano', 'f.unsure': 'Ainda não sei',
+  'copy': 'Copiar', 'copied': 'Copiado', 'f.name': 'Seu nome', 'f.name.ph': 'Ex.: Rafael Souza', 'f.sport': 'Modalidade', 'f.sport.ph': 'Ex.: Futebol, atacante', 'f.plan': 'Pacote', 'f.unsure': 'Ainda não sei',
   'f.wa': 'Enviar no WhatsApp →', 'f.ig': 'Abrir Direct', 'f.copy': 'Copiar mensagem',
   'f.ok': 'Mensagem copiada. Cole no WhatsApp, no Direct ou no e-mail.', 'f.sel': 'Texto selecionado. Copie e cole no WhatsApp, no Direct ou no e-mail.',
-  'msg': (n, s, p) => `Olá, Stars Media! ${n ? 'Sou ' + n + (s ? ', ' + s : '') + '. ' : (s ? s + '. ' : '')}${p ? 'Tenho interesse no plano ' + p + '.' : 'Quero ajuda para escolher o plano ideal.'} Podemos conversar?`,
+  'msg': (n, s, p) => `Olá, Stars Media! ${n ? 'Sou ' + n + (s ? ', ' + s : '') + '. ' : (s ? s + '. ' : '')}${p ? 'Tenho interesse no pacote ' + p + '.' : 'Quero ajuda para escolher o pacote ideal.'} Podemos conversar?`,
   'back': '← Voltar ao início', 'close': 'Fechar',
   'pf.eyebrow': 'Portfólio', 'pf.title': 'Feito pela<br><span style="color:var(--volt)">Stars Media.</span>', 'pf.sub': 'Artes e vídeos que criamos para os nossos atletas. Toque para assistir ou ampliar.',
   'v0.t': 'Highlights · Yhoran', 'v0.d': 'Planaltina × Samambaia — os melhores lances do zagueiro, editados pela Stars Media.', 'yt.open': 'Assistir no YouTube ↗', 'yt.play': 'Reproduzir vídeo',
@@ -582,7 +594,7 @@ br: {
   'v3.t': 'Proposta comercial animada', 'v3.d': 'Planos e valores apresentados em motion, pronta para o Direct.',
   'arts': ['Dia de jogo · Pulo × São Paulo', 'Dia de jogo · São Paulo × Pequeno Mestre', 'Dia de jogo · Anapolina × Cerrado', 'Dia de jogo · Indautxu × Kaskagorri', 'Dia de jogo · Bola no Pé × Itapevi', 'Dia de jogo · Santos × Bate Bola', 'Destaque em retícula', 'Revelação da marca', 'Três frentes de trabalho', 'Arte de dia de jogo', 'Redes sociais', 'Branding pessoal', 'Cada detalhe importa', 'Telas ao vivo', 'Assinatura final', 'Comparação de planos', 'Boas-vindas · canarinho', 'Boas-vindas · azul', 'Foto de perfil · cobalto', 'Foto de perfil · volt', 'Foto de perfil · escura'],
   'at.eyebrow': 'Atletas', 'at.title': 'Nossos<br><span style="color:var(--volt)">atletas.</span>', 'at.sub': 'Os atletas que constroem a sua imagem com a Stars Media.',
-  'at.soon': 'Em breve', 'at.born': 'Geração', 'at.slot': 'Atleta Stars Media', 'at.join.t': 'Quer ser o próximo?', 'at.join.d': 'Conte sua história e escolha o plano para começar.', 'at.join.cta': 'Falar com a Stars →',
+  'at.soon': 'Em breve', 'at.born': 'Geração', 'at.slot': 'Atleta Stars Media', 'at.join.t': 'Quer ser o próximo?', 'at.join.d': 'Conte sua história e escolha o pacote para começar.', 'at.join.cta': 'Falar com a Stars →',
   'foot.tag': 'Seu talento. Sua história. <span>Seu momento de brilhar.</span>', 'foot.copy': '© 2026 Stars Media · Marketing esportivo'
 },
 pt: {},
@@ -591,7 +603,7 @@ es: {}
 };
 // PT-PT: start from BR and override what differs
 I18N.pt = Object.assign({}, I18N.br, {
-  'lang.label': 'Idioma', 'hero.l3': 'Sê visto.', 'cta.whatsapp': 'Fala connosco', 'wa.hello': 'Olá, Stars Media! Quero saber mais sobre os planos.',
+  'lang.label': 'Idioma', 'hero.l3': 'Sê visto.', 'cta.whatsapp': 'Fala connosco', 'wa.hello': 'Olá, Stars Media! Quero saber mais sobre os pacotes.',
   'hero.eyebrow': 'Agência de marketing desportivo', 'hero.lead': 'Construímos a imagem de atletas com design criativo, conteúdo desportivo profissional e estratégia digital.',
   'badge': 'O teu talento • A tua história • O teu momento de brilhar •',
   'ticker': ['Dia de jogo', 'Melhores momentos', 'Redes sociais', 'Branding pessoal', 'Design criativo', 'Estratégia digital'],
@@ -605,30 +617,31 @@ I18N.pt = Object.assign({}, I18N.br, {
   's3.d': 'Planeamento, calendário e publicações com uma linha visual só tua.',
   's4.d': 'Monograma, cores e tipografia que transformam o teu nome numa marca.',
   's6.d': 'Marketing desportivo pensado para fazer crescer o teu alcance de forma consistente.',
-  'plans.title': 'Três planos.<br><span style="color:var(--volt)">Três formas de te destacares.</span>', 'plans.sub': 'Escolhe o que melhor responde às tuas ambições. Todos com publicação de apresentação.',
-  'feats': [['3 designs desportivos personalizados', 'Publicação de apresentação', 'Marketing desportivo para reforçar a tua presença digital'],
-            ['4 designs personalizados', 'Publicação de apresentação', 'Vídeo curto com os teus melhores momentos', 'Marketing desportivo'],
-            ['6 designs personalizados, 2 deles animados', 'Publicação de apresentação', 'Vídeos curtos e longos com os teus melhores momentos', 'Apoio dedicado']],
-  'picks': ['Escolher Essencial', 'Quero o Rendimento →', 'Escolher Elite'],
+  'plans.title': 'Três pacotes.<br><span style="color:var(--volt)">Do primeiro jogo à época inteira.</span>', 'plans.sub': 'Pagamento único, sem mensalidades. Todos com gestão de marketing desportivo.',
+  'feats': [['Publicação de apresentação (feed + story)', 'Gestão de marketing desportivo', '3 designs de dia de jogo'],
+            ['Gestão de marketing desportivo', '4 designs de dia de jogo', '2 designs de resultado ou estatística', '1 vídeo curto com os teus melhores momentos (até 60s)'],
+            ['Publicação de apresentação', 'Gestão de marketing desportivo durante toda a época', 'Design de dia de jogo para todos os jogos', 'Design de resultado em cada jogo em destaque', '2 vídeos completos com os teus melhores momentos, um por semestre', 'Motion de apresentação do atleta', 'Atendimento prioritário por WhatsApp']],
+  'picks': ['Escolher Estreia', 'Escolher Destaque', 'Quero a Época →'],
   'ct.eyebrow': 'Vamos começar', 'ct.title': 'Faz do teu talento algo <span class="c">impossível de ignorar.</span>',
   'ct.text': 'Preenche os dados ao lado e envia a mensagem pronta pelo WhatsApp ou pelo Direct. Se preferires, fala connosco por um destes canais:',
   'f.name': 'O teu nome', 'f.name.ph': 'Ex.: Rafael Sousa', 'f.sport.ph': 'Ex.: Futebol, avançado', 'f.unsure': 'Ainda não sei',
   'f.ok': 'Mensagem copiada. Cola no WhatsApp, no Direct ou no e-mail.', 'f.sel': 'Texto selecionado. Copia e cola no WhatsApp, no Direct ou no e-mail.',
-  'msg': (n, s, p) => `Olá, Stars Media! ${n ? 'Sou o ' + n + (s ? ', ' + s : '') + '. ' : (s ? s + '. ' : '')}${p ? 'Tenho interesse no plano ' + p + '.' : 'Quero ajuda para escolher o plano ideal.'} Podemos falar?`,
+  'msg': (n, s, p) => `Olá, Stars Media! ${n ? 'Sou o ' + n + (s ? ', ' + s : '') + '. ' : (s ? s + '. ' : '')}${p ? 'Tenho interesse no pacote ' + p + '.' : 'Quero ajuda para escolher o pacote ideal.'} Podemos falar?`,
   'pf.sub': 'Designs e vídeos que criámos para os nossos atletas. Toca para ver ou ampliar.',
   'v2.d': 'Versão vertical 9:16 com narração no teu idioma.', 'v3.d': 'Planos e valores apresentados em motion, pronta para o Direct.',
   'arts': ['Dia de jogo · Pulo × São Paulo', 'Dia de jogo · São Paulo × Pequeno Mestre', 'Dia de jogo · Anapolina × Cerrado', 'Dia de jogo · Indautxu × Kaskagorri', 'Dia de jogo · Bola no Pé × Itapevi', 'Dia de jogo · Santos × Bate Bola', 'Destaque em retícula', 'Revelação da marca', 'Três frentes de trabalho', 'Arte de dia de jogo', 'Redes sociais', 'Branding pessoal', 'Cada detalhe conta', 'Ecrãs em direto', 'Assinatura final', 'Comparação de planos', 'Boas-vindas · canarinho', 'Boas-vindas · azul', 'Foto de perfil · cobalto', 'Foto de perfil · volt', 'Foto de perfil · escura'],
   'v0.d': 'Planaltina × Samambaia — os melhores lances do defesa central, editados pela Stars Media.', 'yt.open': 'Ver no YouTube ↗',
-  'at.sub': 'Os atletas que constroem a sua imagem com a Stars Media.', 'at.join.d': 'Conta a tua história e escolhe o plano para começar.', 'at.join.cta': 'Falar com a Stars →',
+  'at.sub': 'Os atletas que constroem a sua imagem com a Stars Media.', 'at.join.d': 'Conta a tua história e escolhe o pacote para começar.', 'at.join.cta': 'Falar com a Stars →',
   'foot.tag': 'O teu talento. A tua história. <span>O teu momento de brilhar.</span>', 'foot.copy': '© 2026 Stars Media · Marketing desportivo',
-  'diff': d => `Só +${d}/mês vs Essencial, já com vídeo`
+  'per': ['/pacote', '/pacote', '/época'], 'names': ['Estreia', 'Destaque', 'Época'],
+  'diff': 'A pronto ou em prestações · época inteira coberta', 'av.t': 'Peças avulsas', 'av.d': 'Precisas só de uma peça? Pede em separado.', 'av.items': ['Design de dia de jogo', 'Design de resultado ou estatística', 'Publicação de apresentação (feed + story)', 'Vídeo curto de melhores momentos (até 60s)', 'Vídeo completo de melhores momentos', 'Motion de apresentação do atleta']
 });
 I18N.en = {
-  'lang.label': 'Language', 'nav.services': 'Services', 'nav.plans': 'Plans', 'nav.portfolio': 'Portfolio', 'nav.athletes': 'Athletes', 'nav.contact': 'Contact',
-  'cta.whatsapp': 'Chat on WhatsApp', 'wa.hello': 'Hi, Stars Media! I would like to know more about your plans.',
+  'lang.label': 'Language', 'nav.services': 'Services', 'nav.plans': 'Packages', 'nav.portfolio': 'Portfolio', 'nav.athletes': 'Athletes', 'nav.contact': 'Contact',
+  'cta.whatsapp': 'Chat on WhatsApp', 'wa.hello': 'Hi, Stars Media! I would like to know more about your packages.',
   'hero.eyebrow': 'Sports marketing agency', 'hero.l1': 'Talent', 'hero.l2': 'isn’t enough.', 'hero.l3': 'Be seen.',
   'hero.lead': 'We build athletes’ image through creative design, professional sports content and digital strategy.',
-  'hero.cta1': 'See plans →', 'hero.cta2': 'See portfolio', 'badge': 'Your talent • Your story • Your spotlight •',
+  'hero.cta1': 'See packages →', 'hero.cta2': 'See portfolio', 'badge': 'Your talent • Your story • Your spotlight •',
   'ticker': ['Match day', 'Highlights', 'Social media', 'Personal branding', 'Creative design', 'Digital strategy'],
   'man.eyebrow': 'Why we exist', 'man.text': 'At Stars Media, we believe every athlete deserves to be seen, recognized and valued. Your career deserves more than recognition on the pitch.',
   'man.w1': 'Seen.', 'man.w2': 'Recognized.', 'man.w3': 'Valued.',
@@ -642,19 +655,19 @@ I18N.en = {
   's4.t': 'Personal branding', 's4.d': 'Monogram, colors and typography that turn your name into a brand.',
   's5.t': 'Creative design', 's5.d': 'Custom designs, including animated pieces for moments that call for motion.',
   's6.t': 'Digital strategy', 's6.d': 'Sports marketing designed to grow your reach consistently.',
-  'plans.title': 'Three plans.<br><span style="color:var(--volt)">Three ways to stand out.</span>', 'plans.sub': 'Choose the one that matches your ambitions. All include a welcome post.',
-  'per': '/month', 'rec': '★ Recommended', 'names': ['Essential', 'Performance', 'Elite'],
-  'picks': ['Choose Essential', 'I want Performance →', 'Choose Elite'],
-  'feats': [['3 custom sports designs', 'Welcome post', 'Sports marketing to strengthen your digital presence'],
-            ['4 custom designs', 'Welcome post', 'Short highlight video', 'Sports marketing'],
-            ['6 custom designs, 2 of them animated', 'Welcome post', 'Short and long-form highlight videos', 'Dedicated support']],
-  'diff': d => `Only +${d}/mo vs Essential, video included`,
+  'plans.title': 'Three packages.<br><span style="color:var(--volt)">From your first game to the whole season.</span>', 'plans.sub': 'One-time payment, no monthly fees. All include sports marketing management.',
+  'per': ['/package', '/package', '/season'], 'rec': '★ Recommended', 'names': ['Debut', 'Spotlight', 'Full Season'],
+  'picks': ['Choose Debut', 'Choose Spotlight', 'I want Full Season →'],
+  'feats': [['Welcome post (feed + story)', 'Sports marketing management', '3 match day designs'],
+            ['Sports marketing management', '4 match day designs', '2 result or stats designs', '1 short highlight video (up to 60s)'],
+            ['Welcome post', 'Sports marketing management all season long', 'Match day design for every game', 'Result design for every standout game', '2 full highlight videos, one per half-season', 'Athlete intro motion piece', 'Priority WhatsApp support']],
+  'diff': 'Pay in full or in instalments · the whole season covered', 'av.t': 'À la carte', 'av.d': 'Need just one piece? Order it on its own.', 'av.items': ['Match day design', 'Result or stats design', 'Welcome post (feed + story)', 'Short highlight video (up to 60s)', 'Full highlight video', 'Athlete intro motion piece'],
   'ct.eyebrow': 'Let’s get started', 'ct.title': 'Make your talent <span class="c">impossible to ignore.</span>',
   'ct.text': 'Fill in your details and send the ready-made message on WhatsApp or Instagram. Or reach us on any of these channels:',
-  'copy': 'Copy', 'copied': 'Copied', 'f.name': 'Your name', 'f.name.ph': 'e.g. Rafael Souza', 'f.sport': 'Sport', 'f.sport.ph': 'e.g. Football, striker', 'f.plan': 'Plan', 'f.unsure': 'Not sure yet',
+  'copy': 'Copy', 'copied': 'Copied', 'f.name': 'Your name', 'f.name.ph': 'e.g. Rafael Souza', 'f.sport': 'Sport', 'f.sport.ph': 'e.g. Football, striker', 'f.plan': 'Package', 'f.unsure': 'Not sure yet',
   'f.wa': 'Send on WhatsApp →', 'f.ig': 'Open Instagram DM', 'f.copy': 'Copy message',
   'f.ok': 'Message copied. Paste it on WhatsApp, Instagram or email.', 'f.sel': 'Text selected. Copy and paste it on WhatsApp, Instagram or email.',
-  'msg': (n, s, p) => `Hi, Stars Media! ${n ? 'I’m ' + n + (s ? ', ' + s : '') + '. ' : (s ? s + '. ' : '')}${p ? 'I’m interested in the ' + p + ' plan.' : 'I’d like help choosing the right plan.'} Can we talk?`,
+  'msg': (n, s, p) => `Hi, Stars Media! ${n ? 'I’m ' + n + (s ? ', ' + s : '') + '. ' : (s ? s + '. ' : '')}${p ? 'I’m interested in the ' + p + ' package.' : 'I’d like help choosing the right package.'} Can we talk?`,
   'back': '← Back to home', 'close': 'Close',
   'pf.eyebrow': 'Portfolio', 'pf.title': 'Made by<br><span style="color:var(--volt)">Stars Media.</span>', 'pf.sub': 'Designs and videos we created for our athletes. Tap to play or enlarge.',
   'v0.t': 'Highlights · Yhoran', 'v0.d': 'Planaltina × Samambaia — the centre-back’s best moments, edited by Stars Media.', 'yt.open': 'Watch on YouTube ↗', 'yt.play': 'Play video',
@@ -664,15 +677,15 @@ I18N.en = {
   'v3.t': 'Animated proposal', 'v3.d': 'Plans and prices presented in motion, ready to send by DM.',
   'arts': ['Match day · Pulo × São Paulo', 'Match day · São Paulo × Pequeno Mestre', 'Match day · Anapolina × Cerrado', 'Match day · Indautxu × Kaskagorri', 'Match day · Bola no Pé × Itapevi', 'Match day · Santos × Bate Bola', 'Halftone highlight', 'Brand reveal', 'Three service fronts', 'Match day design', 'Social media', 'Personal branding', 'Every detail matters', 'Live screens', 'End card', 'Plan comparison', 'Welcome · canary', 'Welcome · blue', 'Profile picture · cobalt', 'Profile picture · volt', 'Profile picture · dark'],
   'at.eyebrow': 'Athletes', 'at.title': 'Our<br><span style="color:var(--volt)">athletes.</span>', 'at.sub': 'The athletes building their image with Stars Media.',
-  'at.soon': 'Coming soon', 'at.born': 'Born', 'at.slot': 'Stars Media athlete', 'at.join.t': 'Want to be next?', 'at.join.d': 'Tell us your story and pick a plan to get started.', 'at.join.cta': 'Talk to Stars →',
+  'at.soon': 'Coming soon', 'at.born': 'Born', 'at.slot': 'Stars Media athlete', 'at.join.t': 'Want to be next?', 'at.join.d': 'Tell us your story and pick a package to get started.', 'at.join.cta': 'Talk to Stars →',
   'foot.tag': 'Your talent. Your story. <span>Your spotlight.</span>', 'foot.copy': '© 2026 Stars Media · Sports marketing'
 };
 I18N.es = {
-  'lang.label': 'Idioma', 'nav.services': 'Servicios', 'nav.plans': 'Planes', 'nav.portfolio': 'Portafolio', 'nav.athletes': 'Atletas', 'nav.contact': 'Contacto',
-  'cta.whatsapp': 'Escríbenos', 'wa.hello': '¡Hola, Stars Media! Quiero saber más sobre los planes.',
+  'lang.label': 'Idioma', 'nav.services': 'Servicios', 'nav.plans': 'Paquetes', 'nav.portfolio': 'Portafolio', 'nav.athletes': 'Atletas', 'nav.contact': 'Contacto',
+  'cta.whatsapp': 'Escríbenos', 'wa.hello': '¡Hola, Stars Media! Quiero saber más sobre los paquetes.',
   'hero.eyebrow': 'Agencia de marketing deportivo', 'hero.l1': 'Talento', 'hero.l2': 'no basta.', 'hero.l3': 'Hazte ver.',
   'hero.lead': 'Construimos la imagen de deportistas con diseño creativo, contenido deportivo profesional y estrategia digital.',
-  'hero.cta1': 'Ver planes →', 'hero.cta2': 'Ver portafolio', 'badge': 'Tu talento • Tu historia • Tu momento de brillar •',
+  'hero.cta1': 'Ver paquetes →', 'hero.cta2': 'Ver portafolio', 'badge': 'Tu talento • Tu historia • Tu momento de brillar •',
   'ticker': ['Día de partido', 'Mejores momentos', 'Redes sociales', 'Branding personal', 'Diseño creativo', 'Estrategia digital'],
   'man.eyebrow': 'Por qué existimos', 'man.text': 'En Stars Media creemos que cada deportista merece ser visto, reconocido y valorado. Tu carrera merece mucho más que reconocimiento dentro del campo.',
   'man.w1': 'Visto.', 'man.w2': 'Reconocido.', 'man.w3': 'Valorado.',
@@ -686,19 +699,19 @@ I18N.es = {
   's4.t': 'Branding personal', 's4.d': 'Monograma, colores y tipografía que convierten tu nombre en marca.',
   's5.t': 'Diseño creativo', 's5.d': 'Diseños personalizados, incluidas piezas animadas para los momentos que piden movimiento.',
   's6.t': 'Estrategia digital', 's6.d': 'Marketing deportivo pensado para hacer crecer tu alcance de forma constante.',
-  'plans.title': 'Tres planes.<br><span style="color:var(--volt)">Tres formas de destacar.</span>', 'plans.sub': 'Elige el que mejor se adapte a tus objetivos. Todos incluyen publicación de bienvenida.',
-  'per': '/mes', 'rec': '★ Recomendado', 'names': ['Esencial', 'Rendimiento', 'Elite'],
-  'picks': ['Elegir Esencial', 'Quiero Rendimiento →', 'Elegir Elite'],
-  'feats': [['3 diseños deportivos personalizados', 'Publicación de bienvenida', 'Marketing deportivo para fortalecer tu presencia digital'],
-            ['4 diseños personalizados', 'Publicación de bienvenida', 'Video corto de mejores momentos', 'Marketing deportivo'],
-            ['6 diseños personalizados, 2 de ellos animados', 'Publicación de bienvenida', 'Videos cortos y largos de mejores momentos', 'Soporte personalizado']],
-  'diff': d => `Solo +${d}/mes vs Esencial, con video incluido`,
+  'plans.title': 'Tres paquetes.<br><span style="color:var(--volt)">Del primer partido a toda la temporada.</span>', 'plans.sub': 'Pago único, sin mensualidades. Todos incluyen gestión de marketing deportivo.',
+  'per': ['/paquete', '/paquete', '/temporada'], 'rec': '★ Recomendado', 'names': ['Debut', 'Destacado', 'Temporada'],
+  'picks': ['Elegir Debut', 'Elegir Destacado', 'Quiero la Temporada →'],
+  'feats': [['Publicación de bienvenida (feed + story)', 'Gestión de marketing deportivo', '3 diseños de día de partido'],
+            ['Gestión de marketing deportivo', '4 diseños de día de partido', '2 diseños de resultado o estadística', '1 video corto de mejores momentos (hasta 60s)'],
+            ['Publicación de bienvenida', 'Gestión de marketing deportivo toda la temporada', 'Diseño de día de partido para todos los partidos', 'Diseño de resultado en cada partido destacado', '2 videos completos de mejores momentos, uno por semestre', 'Motion de presentación del atleta', 'Atención prioritaria por WhatsApp']],
+  'diff': 'Pago único o en cuotas · toda la temporada cubierta', 'av.t': 'Piezas sueltas', 'av.d': '¿Necesitas solo una pieza? Pídela por separado.', 'av.items': ['Diseño de día de partido', 'Diseño de resultado o estadística', 'Publicación de bienvenida (feed + story)', 'Video corto de mejores momentos (hasta 60s)', 'Video completo de mejores momentos', 'Motion de presentación del atleta'],
   'ct.eyebrow': 'Empecemos', 'ct.title': 'Haz que tu talento sea <span class="c">imposible de ignorar.</span>',
   'ct.text': 'Completa tus datos y envía el mensaje listo por WhatsApp o por Instagram. Si prefieres, escríbenos por uno de estos canales:',
-  'copy': 'Copiar', 'copied': 'Copiado', 'f.name': 'Tu nombre', 'f.name.ph': 'Ej.: Rafael Souza', 'f.sport': 'Deporte', 'f.sport.ph': 'Ej.: Fútbol, delantero', 'f.plan': 'Plan', 'f.unsure': 'Aún no lo sé',
+  'copy': 'Copiar', 'copied': 'Copiado', 'f.name': 'Tu nombre', 'f.name.ph': 'Ej.: Rafael Souza', 'f.sport': 'Deporte', 'f.sport.ph': 'Ej.: Fútbol, delantero', 'f.plan': 'Package', 'f.unsure': 'Aún no lo sé',
   'f.wa': 'Enviar por WhatsApp →', 'f.ig': 'Abrir Instagram', 'f.copy': 'Copiar mensaje',
   'f.ok': 'Mensaje copiado. Pégalo en WhatsApp, Instagram o en un correo.', 'f.sel': 'Texto seleccionado. Cópialo y pégalo en WhatsApp, Instagram o en un correo.',
-  'msg': (n, s, p) => `¡Hola, Stars Media! ${n ? 'Soy ' + n + (s ? ', ' + s : '') + '. ' : (s ? s + '. ' : '')}${p ? 'Me interesa el plan ' + p + '.' : 'Quiero ayuda para elegir el plan ideal.'} ¿Hablamos?`,
+  'msg': (n, s, p) => `¡Hola, Stars Media! ${n ? 'Soy ' + n + (s ? ', ' + s : '') + '. ' : (s ? s + '. ' : '')}${p ? 'Me interesa el paquete ' + p + '.' : 'Quiero ayuda para elegir el paquete ideal.'} ¿Hablamos?`,
   'back': '← Volver al inicio', 'close': 'Cerrar',
   'pf.eyebrow': 'Portafolio', 'pf.title': 'Hecho por<br><span style="color:var(--volt)">Stars Media.</span>', 'pf.sub': 'Diseños y videos que creamos para nuestros atletas. Toca para ver o ampliar.',
   'v0.t': 'Highlights · Yhoran', 'v0.d': 'Planaltina × Samambaia — las mejores jugadas del defensa central, editadas por Stars Media.', 'yt.open': 'Ver en YouTube ↗', 'yt.play': 'Reproducir video',
@@ -708,15 +721,15 @@ I18N.es = {
   'v3.t': 'Propuesta comercial animada', 'v3.d': 'Planes y precios presentados en motion, lista para enviar por mensaje.',
   'arts': ['Día de partido · Pulo × São Paulo', 'Día de partido · São Paulo × Pequeno Mestre', 'Día de partido · Anapolina × Cerrado', 'Día de partido · Indautxu × Kaskagorri', 'Día de partido · Bola no Pé × Itapevi', 'Día de partido · Santos × Bate Bola', 'Destaque en trama', 'Revelación de la marca', 'Tres frentes de trabajo', 'Diseño de día de partido', 'Redes sociales', 'Branding personal', 'Cada detalle importa', 'Pantallas en vivo', 'Cierre de marca', 'Comparación de planes', 'Bienvenida · amarillo', 'Bienvenida · azul', 'Foto de perfil · cobalto', 'Foto de perfil · volt', 'Foto de perfil · oscura'],
   'at.eyebrow': 'Atletas', 'at.title': 'Nuestros<br><span style="color:var(--volt)">atletas.</span>', 'at.sub': 'Los deportistas que construyen su imagen con Stars Media.',
-  'at.soon': 'Próximamente', 'at.born': 'Generación', 'at.slot': 'Atleta Stars Media', 'at.join.t': '¿Quieres ser el próximo?', 'at.join.d': 'Cuéntanos tu historia y elige un plan para empezar.', 'at.join.cta': 'Hablar con Stars →',
+  'at.soon': 'Próximamente', 'at.born': 'Generación', 'at.slot': 'Atleta Stars Media', 'at.join.t': '¿Quieres ser el próximo?', 'at.join.d': 'Cuéntanos tu historia y elige un paquete para empezar.', 'at.join.cta': 'Hablar con Stars →',
   'foot.tag': 'Tu talento. Tu historia. <span>Tu momento de brillar.</span>', 'foot.copy': '© 2026 Stars Media · Marketing deportivo'
 };
 
 // prices from the Stars Media proposals
 const PRICES = {
-  brl: { v: [40, 70, 120], f: v => 'R$' + v },
-  eur: { v: [9.99, 14.99, 19.99], f: v => v.toFixed(2).replace('.', ',') + '€' },
-  usd: { v: [9.99, 12.99, 17.99], f: v => 'US$' + v.toFixed(2) },
+  brl: { v: [100, 200, 500], a: [25, 25, 40, 80, 150, 150], f: v => 'R$' + v },
+  eur: { v: [15.99, 31.99, 79.99], a: [3.99, 3.99, 6.99, 12.99, 23.99, 23.99], f: v => v.toFixed(2).replace('.', ',') + '€' },
+  usd: { v: [18.99, 36.99, 92.99], a: [4.99, 4.99, 7.99, 14.99, 27.99, 27.99], f: v => 'US$' + v.toFixed(2) },
 };
 const LANG_CUR = { br: 'brl', pt: 'eur', en: 'usd', es: 'usd' };
 // athletes: add real entries here as { name, sport, handle, img }
@@ -748,10 +761,11 @@ function applyLang() {
   document.querySelectorAll('[data-pick]').forEach(el => el.textContent = t('picks')[+el.dataset.pick]);
   document.querySelectorAll('[data-feats]').forEach(ul => {
     const i = +ul.dataset.feats; ul.innerHTML = '';
-    t('feats')[i].forEach((f, j) => { const li = document.createElement('li'); li.textContent = f; if (i === 1 && j === 2) li.className = 'hl'; ul.appendChild(li); });
+    t('feats')[i].forEach((f, j) => { const li = document.createElement('li'); li.textContent = f; if (i === 2 && j === 4) li.className = 'hl'; ul.appendChild(li); });
   });
+  document.querySelectorAll('[data-per]').forEach(el => el.textContent = t('per')[+el.dataset.per]);
   const sel = $('f-plan'), keep = sel.selectedIndex; sel.innerHTML = '';
-  [names[1], names[0], names[2], t('f.unsure')].forEach((n, i) => { const o = document.createElement('option'); o.value = String(i); o.textContent = n; sel.appendChild(o); });
+  [names[2], names[0], names[1], t('f.unsure')].forEach((n, i) => { const o = document.createElement('option'); o.value = String(i); o.textContent = n; sel.appendChild(o); });
   sel.selectedIndex = keep >= 0 ? keep : 0;
   $('wa-top').href = `https://wa.me/${WA}?text=` + encodeURIComponent(t('wa.hello'));
   document.querySelectorAll('[data-lv]').forEach(v => { const k = v.dataset.lv; const src = `media/${k}-${LG}.mp4`; if (!v.src.endsWith(src)) { v.poster = `media/cover-${k}-${LG}.jpg`; v.src = src; } });
@@ -761,11 +775,12 @@ function applyLang() {
 function setCur(c) {
   CUR = c; const P = PRICES[c];
   document.querySelectorAll('[data-p]').forEach(el => el.textContent = P.f(P.v[+el.dataset.p]));
-  const d = P.v[1] - P.v[0]; $('diff').textContent = t('diff')(P.f(Math.round(d * 100) / 100).replace(/[.,]00(?=€|$)/, ''));
+  $('diff').textContent = t('diff');
+  $('av-list').innerHTML = ''; t('av.items').forEach((n, i) => { const li = document.createElement('li'); const a = document.createElement('span'); a.textContent = n; const b = document.createElement('b'); b.textContent = P.f(P.a[i]); li.append(a, b); $('av-list').appendChild(li); });
   document.querySelectorAll('.cur button').forEach(b => b.setAttribute('aria-pressed', b.dataset.c === c));
 }
 function compose() {
-  const names = t('names'), idx = +$('f-plan').value, p = [names[1], names[0], names[2], null][idx];
+  const names = t('names'), idx = +$('f-plan').value, p = [names[2], names[0], names[1], null][idx];
   const text = t('msg')($('f-name').value.trim(), $('f-sport').value.trim(), p);
   $('f-out').value = text; $('f-wa').href = `https://wa.me/${WA}?text=` + encodeURIComponent(text);
 }
@@ -820,7 +835,7 @@ addEventListener('hashchange', route);
 // events
 $('lang').addEventListener('change', e => { LG = e.target.value; store.set('sm-lang', LG); CUR = LANG_CUR[LG]; applyLang(); });
 document.querySelectorAll('.cur button').forEach(b => b.addEventListener('click', () => setCur(b.dataset.c)));
-document.querySelectorAll('[data-pick]').forEach(a => a.addEventListener('click', () => { $('f-plan').value = String([1, 0, 2][+a.dataset.pick]); compose(); }));
+document.querySelectorAll('[data-pick]').forEach(a => a.addEventListener('click', () => { $('f-plan').value = String([1, 2, 0][+a.dataset.pick]); compose(); }));
 ['f-name', 'f-sport', 'f-plan'].forEach(id => $(id).addEventListener('input', compose));
 $('msg').addEventListener('submit', async e => {
   e.preventDefault();
@@ -858,7 +873,7 @@ addEventListener('keydown', e => { if (e.key === 'Escape') $('lb').hidden = true
       for (let yy = sp / 2; yy < H; yy += sp) for (let xx = sp / 2; xx < W; xx += sp) {
         const d = Math.hypot(xx - cx, yy - cy) / R, wave = .5 + .5 * Math.sin(d * 14 - tm / 700);
         const r = Math.max(0, (1 - d)) * (1.2 + 2.6 * wave); if (r < .35) continue;
-        x.fillStyle = d < .35 ? 'rgba(212,255,60,.55)' : 'rgba(43,59,255,.7)'; x.beginPath(); x.arc(xx, yy, r, 0, 6.283); x.fill();
+        x.fillStyle = d < .35 ? 'rgba(236,211,181,.55)' : 'rgba(114,2,28,.7)'; x.beginPath(); x.arc(xx, yy, r, 0, 6.283); x.fill();
       }
     }
     if (!reduce) requestAnimationFrame(frame);
