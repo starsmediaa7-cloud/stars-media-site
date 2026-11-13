@@ -40,10 +40,10 @@ export default async function AboutPage() {
         <div className="md:col-span-4 md:col-start-9">
           <Parallax distance={20}>
             <LitPhoto
-              src={photos.number}
+              src={photos.closeUp}
               alt={t("photoAlt")}
               sizes="(min-width: 768px) 420px, 100vw"
-              focus="50% 30%"
+              focus="45% 30%"
               className="in-photo aspect-[3/4] rounded-[2.25rem]"
             />
           </Parallax>

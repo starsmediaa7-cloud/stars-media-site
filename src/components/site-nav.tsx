@@ -6,7 +6,6 @@ import { motion } from "motion/react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { localeLabels, routing } from "@/i18n/routing";
 import { BrandMark } from "./brand-mark";
-import { Wordmark } from "./wordmark";
 
 const items = [
   { href: "/", key: "home" },
@@ -100,11 +99,10 @@ export function SiteNav() {
           <Link
             href="/"
             aria-label="Stars Media"
-            className="relative flex h-10 shrink-0 items-center gap-2.5 rounded-full pl-3 pr-3 text-chalk lg:pr-2 xl:pr-3"
+            className="relative grid h-10 w-11 shrink-0 place-items-center rounded-full"
             onClick={() => setOpen(false)}
           >
             <BrandMark size={22} />
-            <Wordmark className="h-[15px] w-auto lg:hidden xl:block" />
           </Link>
 
           <ul className="relative hidden items-center lg:flex">

@@ -89,7 +89,7 @@ export default async function HomePage() {
                 src={photos.portrait}
                 alt={t("home.hero.photoAlt")}
                 sizes="(min-width: 900px) 480px, 78vw"
-                focus="50% 12%"
+                focus="50% 20%"
                 preload
                 className="lit-deep hero-photo in-photo"
               />
