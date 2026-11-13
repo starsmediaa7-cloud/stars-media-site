@@ -180,22 +180,7 @@
       "video": "Highlight Videos",
       "special": "Special Projects"
     },
-    "items": {
-      "presentation": "Apresentação de jogador",
-      "portrait": "Retrato de matchday",
-      "identity": "Estudo de identidade",
-      "cover": "Capa de melhores momentos",
-      "number": "Revelação de número",
-      "celebration": "Série de comemoração"
-    },
-    "alts": {
-      "presentation": "Jogador de futebol de braços cruzados olhando para a câmera",
-      "portrait": "Jogador de futebol olhando para baixo, com a mão no pescoço",
-      "identity": "Jogador de futebol de braços cruzados sobre o escudo do clube",
-      "cover": "Jogador de futebol de olhos fechados apontando para cima, em preto e branco",
-      "number": "Jogador de futebol de costas mostrando o número 6",
-      "celebration": "Jogador de futebol fazendo um gesto de comemoração com as duas mãos"
-    }
+    "artAlt": "Arte de dia de jogo: {title}"
   },
   "athletesPage": {
     "title": "Discover Athletes",

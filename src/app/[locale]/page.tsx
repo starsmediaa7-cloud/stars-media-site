@@ -14,6 +14,7 @@ import { LitPhoto } from "@/components/lit-photo";
 import { Parallax } from "@/components/parallax";
 import { HeroRing } from "@/components/pitch";
 import { Wordmark } from "@/components/wordmark";
+import { WorkPiece } from "@/components/work-piece";
 import { PlatformShowcase } from "@/components/platform-showcase";
 
 const delay = (seconds: number) => ({ "--delay": `${seconds}s` }) as CSSProperties;
@@ -36,7 +37,7 @@ export async function generateMetadata({
 
 export default async function HomePage() {
   const t = await getTranslations();
-  const work = [portfolioItems[0], portfolioItems[2], portfolioItems[1]];
+  const work = portfolioItems.slice(0, 3);
 
   const organization = {
     "@context": "https://schema.org",
@@ -154,51 +155,35 @@ export default async function HomePage() {
           <div className="mb-12 flex flex-wrap items-end justify-between gap-6 md:mb-16">
             <div>
               <h2 className="t-heading">{t("home.work.title")}</h2>
-              <p className="mt-3 max-w-[44ch] text-[0.9375rem] text-metal">
-                {t("home.work.note")}
-              </p>
+              {work.some((item) => item.demo) ? (
+                <p className="mt-3 max-w-[44ch] text-[0.9375rem] text-metal">
+                  {t("home.work.note")}
+                </p>
+              ) : null}
             </div>
             <Link href="/portfolio" className="link-line">
               {t("home.work.link")}
             </Link>
           </div>
 
-          <div className="grid grid-cols-12 gap-x-4 gap-y-10 md:gap-x-6">
-            {work.map((item, index) => {
-              const layout = [
-                "col-span-12 md:col-span-5",
-                "col-span-8 md:col-span-3 md:mt-80",
-                "col-span-9 col-start-4 md:col-span-4 md:col-start-9 md:mt-24",
-              ][index];
-              const ratio = ["aspect-[4/5]", "aspect-[3/4]", "aspect-[3/4]"][index];
-              return (
-                <figure key={item.key} className={layout}>
-                  <Parallax distance={index === 0 ? 14 : index === 1 ? 30 : 46}>
-                    <LitPhoto
-                      src={item.image}
-                      alt={t(`portfolioPage.alts.${item.key}`)}
-                      sizes="(min-width: 768px) 50vw, 100vw"
-                      focus={item.focus}
-                      color
-                      className={`${ratio} rounded-[1.75rem]`}
-                    >
-                      <span data-glass className="glass glass-deep chip absolute left-4 top-4 z-[3]">
-                        <span className="relative">{t("common.demo")}</span>
-                      </span>
-                    </LitPhoto>
-                    <figcaption className="mt-4 flex items-baseline justify-between gap-4">
-                      <span className="text-chalk">
-                        {t(`portfolioPage.items.${item.key}`)}
-                      </span>
-                      <span className="t-label">
-                        {t(`portfolioPage.categories.${item.category}`)}
-                      </span>
-                    </figcaption>
-                  </Parallax>
-                </figure>
-              );
-            })}
-          </div>
+          <ul className="grid grid-cols-2 gap-x-4 gap-y-12 md:grid-cols-3 md:gap-x-8">
+            {work.map((item, index) => (
+              <li
+                key={item.id}
+                className={["", "md:mt-24", "col-span-2 mx-auto w-1/2 md:col-span-1 md:mx-0 md:mt-10 md:w-auto"][index]}
+              >
+                <Parallax distance={[10, 26, 18][index]}>
+                  <WorkPiece
+                    item={item}
+                    alt={t("portfolioPage.artAlt", { title: item.title })}
+                    category={t(`portfolioPage.categories.${item.category}`)}
+                    demoLabel={t("common.demo")}
+                    sizes="(min-width: 768px) 33vw, 50vw"
+                  />
+                </Parallax>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

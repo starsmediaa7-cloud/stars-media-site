@@ -1,5 +1,9 @@
 import type { StaticImageData } from "next/image";
-import { photos } from "./photos";
+import pulo from "@/assets/work/matchday-pulo-futsal-sao-paulo.jpg";
+import pequenoMestre from "@/assets/work/matchday-sao-paulo-pequeno-mestre.jpg";
+import wimpro from "@/assets/work/matchday-sao-paulo-wimpro.jpg";
+import goiatubaBranco from "@/assets/work/matchday-goiatuba-operario-branco.jpg";
+import goiatubaAzul from "@/assets/work/matchday-goiatuba-operario-azul.jpg";
 
 export const portfolioCategories = [
   "graphics",
@@ -12,31 +16,24 @@ export const portfolioCategories = [
 export type PortfolioCategory = (typeof portfolioCategories)[number];
 
 export type PortfolioItem = {
-  /** key of the title/alt text in messages → portfolioPage.items / alts */
-  key:
-    | "presentation"
-    | "portrait"
-    | "identity"
-    | "cover"
-    | "number"
-    | "celebration";
+  id: string;
+  /** shown as the caption; match names stay the same in every language */
+  title: string;
   category: PortfolioCategory;
   image: StaticImageData;
-  /** true while the piece is a placeholder and not a delivered project */
+  /** true only for a placeholder that is not a delivered project */
   demo: boolean;
-  /** object-position for the crop */
-  focus?: string;
 };
 
 /**
- * Replace these with real projects as they are cleared for publication.
- * Keep `demo: true` on anything that is not a delivered piece.
+ * Delivered pieces, in the order they appear. The first three also
+ * appear on the home page. To add one: put the file in
+ * src/assets/work/, import it above and add an entry here.
  */
 export const portfolioItems: PortfolioItem[] = [
-  { key: "presentation", category: "graphics", image: photos.portrait, demo: true, focus: "50% 22%" },
-  { key: "number", category: "special", image: photos.number, demo: true, focus: "50% 30%" },
-  { key: "portrait", category: "matchday", image: photos.profile, demo: true, focus: "50% 20%" },
-  { key: "identity", category: "branding", image: photos.crest, demo: true, focus: "50% 25%" },
-  { key: "cover", category: "video", image: photos.upward, demo: true, focus: "50% 20%" },
-  { key: "celebration", category: "graphics", image: photos.gesture, demo: true, focus: "50% 28%" },
+  { id: "pulo-futsal-sao-paulo", title: "Pulo Futsal vs São Paulo", category: "matchday", image: pulo, demo: false },
+  { id: "sao-paulo-pequeno-mestre", title: "São Paulo vs Pequeno Mestre", category: "matchday", image: pequenoMestre, demo: false },
+  { id: "sao-paulo-wimpro", title: "São Paulo vs Wimpro", category: "matchday", image: wimpro, demo: false },
+  { id: "goiatuba-operario-1", title: "Goiatuba vs C.E. Operário", category: "matchday", image: goiatubaBranco, demo: false },
+  { id: "goiatuba-operario-2", title: "Goiatuba vs C.E. Operário", category: "matchday", image: goiatubaAzul, demo: false },
 ];

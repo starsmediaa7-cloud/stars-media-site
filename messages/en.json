@@ -180,22 +180,7 @@
       "video": "Highlight Videos",
       "special": "Special Projects"
     },
-    "items": {
-      "presentation": "Player presentation",
-      "portrait": "Matchday portrait",
-      "identity": "Identity study",
-      "cover": "Highlight reel cover",
-      "number": "Squad number reveal",
-      "celebration": "Celebration series"
-    },
-    "alts": {
-      "presentation": "Football player with arms crossed facing the camera",
-      "portrait": "Football player looking down, hand on his neck",
-      "identity": "Football player with arms crossed over the club crest",
-      "cover": "Football player with closed eyes pointing upward, in black and white",
-      "number": "Football player seen from behind showing the number 6",
-      "celebration": "Football player making a celebration gesture with both hands"
-    }
+    "artAlt": "Matchday graphic: {title}"
   },
   "athletesPage": {
     "title": "Discover Athletes",
