@@ -3,10 +3,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400..900;1,14..32,400..900&display=swap">
 <style>
-/* Layout: full-bleed colour bands (ink / wine / beige / cream) like the motion's scene cuts; heavy italic display type does the shouting, everything else stays quiet. Single dark look by design. */
+/* Layout: full-bleed colour bands (ink / cobalt / volt / bone) like the motion's scene cuts; heavy italic display type does the shouting, everything else stays quiet. Single dark look by design. */
 :root{
-  --ink:#1C1C1C; --ink-2:#252323; --line:#3a3434;
-  --cob:#72021C; --cob-d:#4E0113; --volt:#ECD3B5; --bone:#F8F1E8; --mute:#a89d93;
+  --ink:#0B0B10; --ink-2:#15151d; --line:#2a2a38;
+  --cob:#2B3BFF; --cob-d:#1C25C9; --volt:#D4FF3C; --bone:#F3EFE7; --mute:#9b99a8;
   --f-display:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
   --f-body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
   --gut:max(16px,env(safe-area-inset-left,0px));
@@ -54,7 +54,7 @@ header .pill{background:var(--volt);color:var(--ink);font-size:13px}
 .hero h1 .strike::after{content:"";position:absolute;left:-3%;right:-3%;top:52%;height:.12em;background:var(--cob);transform:rotate(-4deg) scaleX(0);transform-origin:left;animation:strike .5s .9s cubic-bezier(.7,0,.3,1) forwards}
 @keyframes rise{from{transform:translateY(105%)}to{transform:none}}
 @keyframes strike{to{transform:rotate(-4deg) scaleX(1)}}
-.hero p.lead{max-width:34ch;font-size:clamp(17px,1.6vw,20px);color:#e2d6c8;margin:28px 0 30px}
+.hero p.lead{max-width:34ch;font-size:clamp(17px,1.6vw,20px);color:#d9d6cf;margin:28px 0 30px}
 .hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
 .btn.volt{background:var(--volt);color:var(--ink);font-size:16px;padding:.8em 1.3em}
 .btn.ghost{background:transparent;color:var(--bone);border:2px solid var(--bone);font-size:16px;padding:.7em 1.2em}
@@ -144,9 +144,10 @@ header .pill{background:var(--volt);color:var(--ink);font-size:13px}
 /* plans */
 .plans{background:var(--cob)}
 .plans .wrap{padding-block:96px}
-.plans .section-head p{color:#f3d9c4}
-.cur{display:inline-flex;background:var(--cob-d);border-radius:999px;padding:4px}
-.cur button{background:none;border:0;color:#f3d9c4;font:700 13px var(--f-body);letter-spacing:.08em;padding:8px 14px;border-radius:999px;cursor:pointer}
+.plans .section-head p{color:#dfe2ff}
+.ctry{display:inline-flex;align-items:center;gap:10px;background:var(--cob-d);border-radius:999px;padding:6px 6px 6px 16px;font:700 12px var(--f-body);letter-spacing:.1em;text-transform:uppercase;color:#dfe2ff}
+.ctry select{appearance:none;-webkit-appearance:none;background:var(--bone) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%230B0B10' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right 12px center;color:var(--ink);border:0;border-radius:999px;padding:8px 32px 8px 14px;font:700 13px var(--f-body);letter-spacing:.02em;cursor:pointer;max-width:62vw}
+.cur button{background:none;border:0;color:#dfe2ff;font:700 13px var(--f-body);letter-spacing:.08em;padding:8px 14px;border-radius:999px;cursor:pointer}
 .cur button[aria-pressed="true"]{background:var(--bone);color:var(--ink)}
 .plan-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:center}
 @media (max-width:900px){.plan-grid{grid-template-columns:minmax(0,1fr)}.plan.mid{order:-1}}
@@ -157,12 +158,13 @@ header .pill{background:var(--volt);color:var(--ink);font-size:13px}
 .price{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;font-variant-numeric:tabular-nums;min-width:0}
 .price b{font:italic 900 clamp(48px,4.6vw,66px)/1 var(--f-display);letter-spacing:-.04em;white-space:nowrap}
 .price small{font-size:15px;opacity:.7}
+.price b.long{font-size:clamp(34px,3.3vw,48px)}
 .plan ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
 .plan li{display:grid;grid-template-columns:26px minmax(0,1fr);gap:10px;align-items:start;font-size:15.5px}
-.plan li::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--bone) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%231C1C1C' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/70% no-repeat;margin-top:1px}
-.plan.mid li::before{background-color:var(--ink);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23ECD3B5' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.plan li::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--bone) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%230B0B10' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/70% no-repeat;margin-top:1px}
+.plan.mid li::before{background-color:var(--ink);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23D4FF3C' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
 .plan li.hl{background:var(--ink);color:var(--volt);border-radius:12px;padding:8px 10px;margin:-8px -10px}
-.plan li.hl::before{background-color:var(--volt);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%231C1C1C' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.plan li.hl::before{background-color:var(--volt);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%230B0B10' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
 .plan .btn{align-self:flex-start;margin-top:auto}
 .plan .btn.dark{background:var(--ink);color:var(--volt);font-size:15px;padding:.85em 1.3em}
 .plan .btn.line{background:transparent;color:var(--bone);border:2px solid var(--bone);font-size:14px;padding:.7em 1.1em}
@@ -180,7 +182,7 @@ form.msg label{display:flex;flex-direction:column;gap:6px;font:600 12px var(--f-
 form.msg input,form.msg select{background:var(--ink-2);color:var(--bone);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font:500 16px var(--f-body);width:100%}
 form.msg .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 @media (max-width:420px){form.msg .row{grid-template-columns:1fr}}
-form.msg output{display:block;background:var(--ink-2);border:1px dashed #4a3c3c;border-radius:12px;padding:12px 14px;font-size:14.5px;line-height:1.5;color:#efe4d6;white-space:pre-wrap}
+form.msg output{display:block;background:var(--ink-2);border:1px dashed #3b3b52;border-radius:12px;padding:12px 14px;font-size:14.5px;line-height:1.5;color:#e7e4dc;white-space:pre-wrap}
 form.msg .status{font-size:13px;color:var(--volt);min-height:1em}
 
 .chan{list-style:none;margin:26px 0 0;padding:0;display:flex;flex-direction:column;gap:10px;max-width:460px}
@@ -222,7 +224,7 @@ nav.links a.on,.mnav a.on{color:var(--volt)}
 .page-head{border-bottom:1px solid var(--line);background:radial-gradient(circle at 85% 10%,color-mix(in srgb,var(--cob) 45%,transparent),transparent 55%),var(--ink)}
 .page-head .wrap{padding-block:40px 48px}
 .page-head h1{font-size:clamp(52px,9vw,128px);margin-top:16px}
-.lead2{max-width:52ch;color:#e2d6c8;font-size:18px;margin:20px 0 0}
+.lead2{max-width:52ch;color:#d9d6cf;font-size:18px;margin:20px 0 0}
 .back{color:var(--mute);text-decoration:none;font:600 13px var(--f-body);letter-spacing:.1em;text-transform:uppercase}
 .back:hover{color:var(--volt)}
 .tabs{display:inline-flex;gap:6px;margin-top:28px;background:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:4px;flex-wrap:wrap}
@@ -255,7 +257,7 @@ nav.links a.on,.mnav a.on{color:var(--volt)}
 .acard.sq img{aspect-ratio:1}
 .acard.fourfive img{aspect-ratio:4/5}
 .acard span{font:600 13px var(--f-body);padding:12px 14px}
-.lb{position:fixed;inset:0;z-index:50;background:rgba(20,18,18,.92);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb{position:fixed;inset:0;z-index:50;background:rgba(5,5,10,.92);display:grid;place-items:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
 .lb img{max-width:min(92vw,720px);max-height:86vh;border-radius:16px}
 .lb-x{position:absolute;top:calc(env(safe-area-inset-top,0px) + 16px);right:calc(env(safe-area-inset-right,0px) + 16px);background:var(--volt);color:var(--ink);border:0;border-radius:999px;padding:10px 16px;font:italic 900 14px var(--f-display);text-transform:uppercase;cursor:pointer}
 .athletes .wrap{padding-block:48px 96px}
@@ -398,9 +400,9 @@ footer .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px 40px
         </article>
         <article class="pcard pc3">
           <div class="vis chart"><svg viewBox="0 0 300 140" preserveAspectRatio="none" aria-hidden="true">
-            <g fill="#F8F1E8" opacity=".25"><circle cx="20" cy="20" r="2"/><circle cx="70" cy="20" r="2"/><circle cx="120" cy="20" r="2"/><circle cx="170" cy="20" r="2"/><circle cx="220" cy="20" r="2"/><circle cx="270" cy="20" r="2"/><circle cx="20" cy="70" r="2"/><circle cx="70" cy="70" r="2"/><circle cx="120" cy="70" r="2"/><circle cx="170" cy="70" r="2"/><circle cx="220" cy="70" r="2"/><circle cx="270" cy="70" r="2"/><circle cx="20" cy="120" r="2"/><circle cx="70" cy="120" r="2"/><circle cx="120" cy="120" r="2"/><circle cx="170" cy="120" r="2"/><circle cx="220" cy="120" r="2"/><circle cx="270" cy="120" r="2"/></g>
-            <polyline points="14,124 70,96 112,108 168,62 214,72 284,14" fill="none" stroke="#ECD3B5" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
-            <g fill="#ECD3B5"><circle cx="70" cy="96" r="8"/><circle cx="168" cy="62" r="8"/><circle cx="284" cy="14" r="9"/></g></svg></div>
+            <g fill="#F3EFE7" opacity=".25"><circle cx="20" cy="20" r="2"/><circle cx="70" cy="20" r="2"/><circle cx="120" cy="20" r="2"/><circle cx="170" cy="20" r="2"/><circle cx="220" cy="20" r="2"/><circle cx="270" cy="20" r="2"/><circle cx="20" cy="70" r="2"/><circle cx="70" cy="70" r="2"/><circle cx="120" cy="70" r="2"/><circle cx="170" cy="70" r="2"/><circle cx="220" cy="70" r="2"/><circle cx="270" cy="70" r="2"/><circle cx="20" cy="120" r="2"/><circle cx="70" cy="120" r="2"/><circle cx="120" cy="120" r="2"/><circle cx="170" cy="120" r="2"/><circle cx="220" cy="120" r="2"/><circle cx="270" cy="120" r="2"/></g>
+            <polyline points="14,124 70,96 112,108 168,62 214,72 284,14" fill="none" stroke="#D4FF3C" stroke-width="7" stroke-linejoin="round" stroke-linecap="round"/>
+            <g fill="#D4FF3C"><circle cx="70" cy="96" r="8"/><circle cx="168" cy="62" r="8"/><circle cx="284" cy="14" r="9"/></g></svg></div>
           <h3 class="disp" data-i18n-html="p3.t"></h3><p data-i18n="p3.d"></p>
         </article>
       </div>
@@ -414,7 +416,7 @@ footer .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px 40px
         <article class="svc"><div class="thumb t-video"><i></i></div><div><h3 class="disp" data-i18n="s2.t"></h3><p data-i18n="s2.d"></p></div></article>
         <article class="svc"><div class="thumb t-grid"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div><h3 class="disp" data-i18n="s3.t"></h3><p data-i18n="s3.d"></p></div></article>
         <article class="svc"><div class="thumb t-badge"><b><span class="mark"></span></b></div><div><h3 class="disp" data-i18n="s4.t"></h3><p data-i18n="s4.d"></p></div></article>
-        <article class="svc"><div class="thumb t-pen"><svg viewBox="0 0 150 118" aria-hidden="true"><path d="M18 98 C45 106 58 34 86 48 S122 22 136 20" fill="none" stroke="#1C1C1C" stroke-width="5" stroke-linecap="round"/><path d="M58 34 L86 48 L114 62" stroke="#72021C" stroke-width="1.6" fill="none"/><circle cx="58" cy="34" r="4" fill="#72021C"/><circle cx="114" cy="62" r="4" fill="#72021C"/><rect x="80" y="42" width="12" height="12" fill="#F8F1E8" stroke="#72021C" stroke-width="2.4"/><rect x="12" y="92" width="12" height="12" fill="#F8F1E8" stroke="#72021C" stroke-width="2.4"/></svg></div><div><h3 class="disp" data-i18n="s5.t"></h3><p data-i18n="s5.d"></p></div></article>
+        <article class="svc"><div class="thumb t-pen"><svg viewBox="0 0 150 118" aria-hidden="true"><path d="M18 98 C45 106 58 34 86 48 S122 22 136 20" fill="none" stroke="#0B0B10" stroke-width="5" stroke-linecap="round"/><path d="M58 34 L86 48 L114 62" stroke="#2B3BFF" stroke-width="1.6" fill="none"/><circle cx="58" cy="34" r="4" fill="#2B3BFF"/><circle cx="114" cy="62" r="4" fill="#2B3BFF"/><rect x="80" y="42" width="12" height="12" fill="#F3EFE7" stroke="#2B3BFF" stroke-width="2.4"/><rect x="12" y="92" width="12" height="12" fill="#F3EFE7" stroke="#2B3BFF" stroke-width="2.4"/></svg></div><div><h3 class="disp" data-i18n="s5.t"></h3><p data-i18n="s5.d"></p></div></article>
         <article class="svc"><div class="t-wrap"><div class="thumb t-ht" style="position:absolute;inset:0"></div><b>+248%</b></div><div><h3 class="disp" data-i18n="s6.t"></h3><p data-i18n="s6.d"></p></div></article>
       </div>
       <div class="more"><a class="pill btn volt" href="#portfolio" data-i18n="hero.cta2"></a></div>
@@ -427,9 +429,7 @@ footer .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px 40px
         <h2 class="disp" data-i18n-html="plans.title"></h2>
         <div style="display:flex;flex-direction:column;gap:14px;align-items:flex-start">
           <p data-i18n="plans.sub"></p>
-          <div class="cur" role="group" aria-label="Moeda / Currency">
-            <button type="button" data-c="brl" aria-pressed="true">R$</button><button type="button" data-c="eur" aria-pressed="false">€</button><button type="button" data-c="usd" aria-pressed="false">US$</button>
-          </div>
+          <label class="ctry"><span id="ctry-l"></span><select id="ctry" aria-label="País / Country"></select></label>
         </div>
       </div>
       <div class="plan-grid">
@@ -725,13 +725,34 @@ I18N.es = {
   'foot.tag': 'Tu talento. Tu historia. <span>Tu momento de brillar.</span>', 'foot.copy': '© 2026 Stars Media · Marketing deportivo'
 };
 
-// prices from the Stars Media proposals
-const PRICES = {
-  brl: { v: [100, 200, 500], a: [25, 25, 40, 80, 150, 150], f: v => 'R$' + v },
-  eur: { v: [15.99, 31.99, 79.99], a: [3.99, 3.99, 6.99, 12.99, 23.99, 23.99], f: v => v.toFixed(2).replace('.', ',') + '€' },
-  usd: { v: [19, 37, 93], a: [5, 5, 8, 15, 28, 28], f: v => 'US$' + v },
+// Pricing: the Brazilian price converted to each local currency and rounded to end in 0.
+// (Exchange rate = local salary / US$ salary from wage.is, 2026 rates. DAMP > 0 would add a salary-based adjustment.)
+// Salaries: wage.is (gross monthly, national statistics / ILO / OECD): [flag, name, lang, currency, locale, salary local, salary US$].
+const BR_SAL = 3200, BR_V = [100, 200, 500], BR_A = [25, 25, 40, 80, 150, 150];
+const COUNTRIES = {
+  BR: ['🇧🇷', 'Brasil', 'br', 'BRL', 'pt-BR', 3200, 588], PT: ['🇵🇹', 'Portugal', 'pt', 'EUR', 'pt-PT', 1550, 1738],
+  ES: ['🇪🇸', 'España', 'es', 'EUR', 'es-ES', 2450, 2748], US: ['🇺🇸', 'United States', 'en', 'USD', 'en-US', 6228, 6228],
+  GB: ['🇬🇧', 'United Kingdom', 'en', 'GBP', 'en-GB', 3253, 4365], CA: ['🇨🇦', 'Canada', 'en', 'CAD', 'en-CA', 5708, 4085],
+  AU: ['🇦🇺', 'Australia', 'en', 'AUD', 'en-AU', 7833, 5490], IE: ['🇮🇪', 'Ireland', 'en', 'EUR', 'en-IE', 4350, 4879],
+  FR: ['🇫🇷', 'France', 'en', 'EUR', 'fr-FR', 3500, 3926], DE: ['🇩🇪', 'Deutschland', 'en', 'EUR', 'de-DE', 4784, 5366],
+  IT: ['🇮🇹', 'Italia', 'en', 'EUR', 'it-IT', 2600, 2916], NL: ['🇳🇱', 'Nederland', 'en', 'EUR', 'nl-NL', 3900, 4374],
+  BE: ['🇧🇪', 'België / Belgique', 'en', 'EUR', 'nl-BE', 3886, 4358], CH: ['🇨🇭', 'Schweiz / Suisse', 'en', 'CHF', 'de-CH', 7800, 9517],
+  JP: ['🇯🇵', '日本 Japan', 'en', 'JPY', 'ja-JP', 398333, 2523], AE: ['🇦🇪', 'UAE', 'en', 'AED', 'en-AE', 16000, 4357],
+  MX: ['🇲🇽', 'México', 'es', 'MXN', 'es-MX', 16500, 881], AR: ['🇦🇷', 'Argentina', 'es', 'ARS', 'es-AR', 850000, 793],
+  CL: ['🇨🇱', 'Chile', 'es', 'CLP', 'es-CL', 750000, 817], CO: ['🇨🇴', 'Colombia', 'es', 'COP', 'es-CO', 2200000, 533],
+  PE: ['🇵🇪', 'Perú', 'es', 'PEN', 'es-PE', 2200, 598], UY: ['🇺🇾', 'Uruguay', 'es', 'UYU', 'es-UY', 55000, 1273],
+  PY: ['🇵🇾', 'Paraguay', 'es', 'PYG', 'es-PY', 4500000, 598], BO: ['🇧🇴', 'Bolivia', 'es', 'BOB', 'es-BO', 4200, 608],
+  EC: ['🇪🇨', 'Ecuador', 'es', 'USD', 'es-EC', 650, 650], CR: ['🇨🇷', 'Costa Rica', 'es', 'CRC', 'es-CR', 620000, 1211],
+  PA: ['🇵🇦', 'Panamá', 'es', 'USD', 'es-PA', 1100, 1100], GT: ['🇬🇹', 'Guatemala', 'es', 'GTQ', 'es-GT', 5800, 756],
+  DO: ['🇩🇴', 'República Dominicana', 'es', 'DOP', 'es-DO', 32000, 526],
+  XX: ['🌍', '', null, 'USD', 'en-US', 1500, 1500],   // other countries: reference salary of US$1,500
 };
-const LANG_CUR = { br: 'brl', pt: 'eur', en: 'usd', es: 'usd' };
+const OTHER = { br: 'Outro país', pt: 'Outro país', en: 'Other country', es: 'Otro país' };
+const CTRY_L = { br: 'Preços para', pt: 'Preços para', en: 'Prices for', es: 'Precios para' };
+const DAMP = 0;   // 0 = plain currency conversion of the Brazilian price
+function nice(v) { if (v < 1000) return Math.max(10, Math.ceil(v / 10 - 1e-9) * 10); const m = Math.pow(10, Math.floor(Math.log10(v)) - 1); return Math.round(v / m) * m; }
+function priceOf(brl, code) { const c = COUNTRIES[code], br = COUNTRIES.BR; const usd = brl / (br[5] / br[6]) * Math.pow(c[6] / br[6], DAMP); return nice(usd * (c[5] / c[6])); }
+function fmt(v, code) { const c = COUNTRIES[code]; try { return new Intl.NumberFormat(c[4], { style: 'currency', currency: c[3], maximumFractionDigits: 0, minimumFractionDigits: 0, currencyDisplay: code === 'XX' ? 'code' : 'symbol' }).format(v); } catch (e) { return c[3] + ' ' + v; } }
 // athletes: add real entries here as { name, sport, handle, img }
 const ATHLETES = [
   { name: 'Yhoran Bryan da Silva', year: 2009, club: 'Samambaia FC', img: 'media/atleta-yhoran.jpg',
@@ -747,7 +768,7 @@ const ARTS = ['art-jogo-pulo-saopaulo', 'art-jogo-saopaulo-pequenomestre', 'art-
 
 const $ = id => document.getElementById(id);
 const store = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} } };
-let LG = 'br', CUR = 'brl';
+let LG = 'br', CTRY = 'BR';
 
 function t(k) { return I18N[LG][k] ?? I18N.br[k] ?? ''; }
 function applyLang() {
@@ -771,15 +792,22 @@ function applyLang() {
   sel.selectedIndex = keep >= 0 ? keep : 0;
   $('wa-top').href = `https://wa.me/${WA}?text=` + encodeURIComponent(t('wa.hello'));
   document.querySelectorAll('[data-lv]').forEach(v => { const k = v.dataset.lv; const src = `media/${k}-${LG}.mp4`; if (!v.src.endsWith(src)) { v.poster = `media/cover-${k}-${LG}.jpg`; v.src = src; } });
-  renderArts(); renderAthletes(); setCur(CUR); compose();
+  renderArts(); renderAthletes(); fillCountries(); setCountry(CTRY); compose();
   $('lang').value = LG;
 }
-function setCur(c) {
-  CUR = c; const P = PRICES[c];
-  document.querySelectorAll('[data-p]').forEach(el => el.textContent = P.f(P.v[+el.dataset.p]));
+function fillCountries() {
+  const sel = $('ctry'); $('ctry-l').textContent = CTRY_L[LG];
+  const codes = Object.keys(COUNTRIES).filter(k => k !== 'XX');
+  const rest = codes.filter(k => k !== 'BR' && k !== 'PT').sort((a, b) => COUNTRIES[a][1].localeCompare(COUNTRIES[b][1]));
+  sel.innerHTML = '';
+  ['BR', 'PT', ...rest, 'XX'].forEach(k => { const o = document.createElement('option'); o.value = k; o.textContent = COUNTRIES[k][0] + ' ' + (k === 'XX' ? OTHER[LG] : COUNTRIES[k][1]); sel.appendChild(o); });
+}
+function setCountry(code) {
+  CTRY = COUNTRIES[code] ? code : 'XX';
+  document.querySelectorAll('[data-p]').forEach(el => { el.textContent = fmt(priceOf(BR_V[+el.dataset.p], CTRY), CTRY); el.classList.toggle('long', el.textContent.length > 9); });
   $('diff').textContent = t('diff');
-  $('av-list').innerHTML = ''; t('av.items').forEach((n, i) => { const li = document.createElement('li'); const a = document.createElement('span'); a.textContent = n; const b = document.createElement('b'); b.textContent = P.f(P.a[i]); li.append(a, b); $('av-list').appendChild(li); });
-  document.querySelectorAll('.cur button').forEach(b => b.setAttribute('aria-pressed', b.dataset.c === c));
+  $('av-list').innerHTML = ''; t('av.items').forEach((n, i) => { const li = document.createElement('li'); const a = document.createElement('span'); a.textContent = n; const b = document.createElement('b'); b.textContent = fmt(priceOf(BR_A[i], CTRY), CTRY); li.append(a, b); $('av-list').appendChild(li); });
+  $('ctry').value = CTRY;
 }
 function compose() {
   const names = t('names'), idx = +$('f-plan').value, p = [names[2], names[0], names[1], null][idx];
@@ -835,8 +863,8 @@ function route() {
 addEventListener('hashchange', route);
 
 // events
-$('lang').addEventListener('change', e => { LG = e.target.value; store.set('sm-lang', LG); CUR = LANG_CUR[LG]; applyLang(); });
-document.querySelectorAll('.cur button').forEach(b => b.addEventListener('click', () => setCur(b.dataset.c)));
+$('lang').addEventListener('change', e => { LG = e.target.value; store.set('sm-lang', LG); applyLang(); });
+$('ctry').addEventListener('change', e => { store.set('sm-country', e.target.value); setCountry(e.target.value); });
 document.querySelectorAll('[data-pick]').forEach(a => a.addEventListener('click', () => { $('f-plan').value = String([1, 2, 0][+a.dataset.pick]); compose(); }));
 ['f-name', 'f-sport', 'f-plan'].forEach(id => $(id).addEventListener('input', compose));
 $('msg').addEventListener('submit', async e => {
@@ -853,29 +881,31 @@ $('lb-x').addEventListener('click', () => $('lb').hidden = true);
 $('lb').addEventListener('click', e => { if (e.target === $('lb')) $('lb').hidden = true; });
 addEventListener('keydown', e => { if (e.key === 'Escape') $('lb').hidden = true; });
 
-// visitor region: time zone first (where the device is), browser language as fallback
-function detectRegion() {
+// visitor country: device time zone first, then the browser's language region
+function detectCountry() {
   let tz = ''; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
-  const nav = (navigator.language || '').toLowerCase();
-  const BR = /^America\/(Sao_Paulo|Araguaina|Bahia|Belem|Boa_Vista|Campo_Grande|Cuiaba|Eirunepe|Fortaleza|Maceio|Manaus|Noronha|Porto_Velho|Recife|Rio_Branco|Santarem)$/;
-  const PT = /^(Europe\/Lisbon|Atlantic\/Azores|Atlantic\/Madeira)$/;
-  const ES = /^(Europe\/Madrid|Atlantic\/Canary|Africa\/Ceuta)$/;
-  const LATAM = /^America\/(Argentina\/.*|Buenos_Aires|Cordoba|Mendoza|Santiago|Punta_Arenas|Bogota|Lima|Caracas|Mexico_City|Cancun|Monterrey|Merida|Chihuahua|Ciudad_Juarez|Mazatlan|Hermosillo|Tijuana|Matamoros|Ojinaga|Bahia_Banderas|Guatemala|El_Salvador|Tegucigalpa|Managua|Costa_Rica|Panama|Havana|Santo_Domingo|Montevideo|Asuncion|La_Paz|Guayaquil)$/;
-  const EURO = /^(Europe\/(Paris|Berlin|Rome|Amsterdam|Brussels|Vienna|Dublin|Helsinki|Athens|Luxembourg|Monaco|Bratislava|Ljubljana|Tallinn|Riga|Vilnius|Malta|Zagreb|Nicosia|San_Marino|Vatican|Andorra|Busingen)|Asia\/(Nicosia|Famagusta))$/;
-  if (BR.test(tz)) return { lang: 'br', cur: 'brl' };
-  if (PT.test(tz)) return { lang: 'pt', cur: 'eur' };
-  if (ES.test(tz)) return { lang: 'es', cur: 'eur' };
-  if (LATAM.test(tz)) return { lang: 'es', cur: 'usd' };
-  const lang = nav.startsWith('pt-pt') ? 'pt' : nav.startsWith('pt') ? 'br' : nav.startsWith('es') ? 'es' : nav ? 'en' : 'br';
-  if (EURO.test(tz)) return { lang, cur: 'eur' };
-  if (!tz) return { lang, cur: LANG_CUR[lang] };
-  return { lang, cur: lang === 'br' ? 'brl' : lang === 'pt' ? 'eur' : 'usd' };
+  const TZ = [
+    ['BR', /^America\/(Sao_Paulo|Araguaina|Bahia|Belem|Boa_Vista|Campo_Grande|Cuiaba|Eirunepe|Fortaleza|Maceio|Manaus|Noronha|Porto_Velho|Recife|Rio_Branco|Santarem)$/],
+    ['PT', /^(Europe\/Lisbon|Atlantic\/Azores|Atlantic\/Madeira)$/], ['ES', /^(Europe\/Madrid|Atlantic\/Canary|Africa\/Ceuta)$/],
+    ['FR', /^Europe\/Paris$/], ['DE', /^Europe\/(Berlin|Busingen)$/], ['IT', /^Europe\/Rome$/], ['NL', /^Europe\/Amsterdam$/], ['BE', /^Europe\/Brussels$/],
+    ['IE', /^Europe\/Dublin$/], ['GB', /^Europe\/London$/], ['CH', /^Europe\/Zurich$/], ['JP', /^Asia\/Tokyo$/], ['AE', /^Asia\/Dubai$/], ['AU', /^Australia\//],
+    ['MX', /^America\/(Mexico_City|Cancun|Monterrey|Merida|Chihuahua|Ciudad_Juarez|Mazatlan|Hermosillo|Tijuana|Matamoros|Ojinaga|Bahia_Banderas)$/],
+    ['AR', /^America\/(Argentina\/.*|Buenos_Aires|Cordoba|Mendoza)$/], ['CL', /^(America\/(Santiago|Punta_Arenas)|Pacific\/Easter)$/],
+    ['CO', /^America\/Bogota$/], ['PE', /^America\/Lima$/], ['UY', /^America\/Montevideo$/], ['PY', /^America\/Asuncion$/], ['BO', /^America\/La_Paz$/],
+    ['EC', /^(America\/Guayaquil|Pacific\/Galapagos)$/], ['CR', /^America\/Costa_Rica$/], ['PA', /^America\/Panama$/], ['GT', /^America\/Guatemala$/], ['DO', /^America\/Santo_Domingo$/],
+    ['CA', /^America\/(Toronto|Vancouver|Edmonton|Winnipeg|Halifax|St_Johns|Regina|Moncton|Glace_Bay|Goose_Bay|Whitehorse|Dawson|Dawson_Creek|Fort_Nelson|Iqaluit|Rankin_Inlet|Resolute|Cambridge_Bay|Inuvik|Swift_Current|Atikokan|Creston|Blanc-Sablon)$/],
+    ['US', /^(America\/(New_York|Chicago|Denver|Los_Angeles|Phoenix|Anchorage|Detroit|Boise|Juneau|Sitka|Nome|Menominee|Adak|Metlakatla|Yakutat|Indiana\/.*|Kentucky\/.*|North_Dakota\/.*)|Pacific\/Honolulu)$/],
+  ];
+  for (const [c, re] of TZ) if (re.test(tz)) return c;
+  const reg = ((navigator.language || '').split('-')[1] || '').toUpperCase();
+  return COUNTRIES[reg] ? reg : 'XX';
 }
+function langFromNav() { const nav = (navigator.language || '').toLowerCase(); return nav.startsWith('pt-pt') ? 'pt' : nav.startsWith('pt') ? 'br' : nav.startsWith('es') ? 'es' : nav ? 'en' : 'br'; }
 // boot
 (() => {
-  const saved = store.get('sm-lang'), geo = detectRegion();
-  LG = I18N[saved] ? saved : geo.lang;
-  CUR = I18N[saved] ? LANG_CUR[LG] : geo.cur;
+  const saved = store.get('sm-lang'), savedC = store.get('sm-country'), geo = detectCountry();
+  CTRY = COUNTRIES[savedC] ? savedC : geo;
+  LG = I18N[saved] ? saved : (COUNTRIES[geo][2] || langFromNav());
   applyLang(); route();
 })();
 
@@ -892,7 +922,7 @@ function detectRegion() {
       for (let yy = sp / 2; yy < H; yy += sp) for (let xx = sp / 2; xx < W; xx += sp) {
         const d = Math.hypot(xx - cx, yy - cy) / R, wave = .5 + .5 * Math.sin(d * 14 - tm / 700);
         const r = Math.max(0, (1 - d)) * (1.2 + 2.6 * wave); if (r < .35) continue;
-        x.fillStyle = d < .35 ? 'rgba(236,211,181,.55)' : 'rgba(114,2,28,.7)'; x.beginPath(); x.arc(xx, yy, r, 0, 6.283); x.fill();
+        x.fillStyle = d < .35 ? 'rgba(212,255,60,.55)' : 'rgba(43,59,255,.7)'; x.beginPath(); x.arc(xx, yy, r, 0, 6.283); x.fill();
       }
     }
     if (!reduce) requestAnimationFrame(frame);
