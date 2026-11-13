@@ -1,0 +1,300 @@
+{
+  "meta": {
+    "siteTitle": "Stars Media — Marketing esportivo para atletas",
+    "siteDescription": "A Stars Media constrói visibilidade, fortalece a marca de atletas e cria oportunidades além do campo.",
+    "about": "Sobre",
+    "services": "Serviços",
+    "portfolio": "Portfólio",
+    "athletes": "Discover Athletes",
+    "mediaCenter": "Media Center",
+    "contact": "Contato",
+    "dashboard": "Área do atleta"
+  },
+  "common": {
+    "skip": "Pular para o conteúdo",
+    "demo": "Demo",
+    "demoImage": "Imagem de demonstração",
+    "inDevelopment": "Em desenvolvimento",
+    "tagline": "Beyond the game.",
+    "talk": "Iniciar uma conversa",
+    "backHome": "Voltar ao início"
+  },
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "services": "Serviços",
+    "athletes": "Atletas",
+    "mediaCenter": "Media Center",
+    "contact": "Contato",
+    "portfolio": "Portfólio",
+    "athleteArea": "Área do atleta",
+    "language": "Idioma",
+    "menu": "Menu",
+    "close": "Fechar",
+    "main": "Navegação principal"
+  },
+  "services": {
+    "graphics": {
+      "name": "Design gráfico esportivo",
+      "summary": "Artes para os momentos que marcam uma temporada: contratações, gols, convocações e prêmios.",
+      "benefit": "Seu perfil parece profissional desde a primeira publicação."
+    },
+    "branding": {
+      "name": "Branding de atleta",
+      "summary": "Uma identidade só sua — símbolo, cores, tipografia e tom — mantida em todos os lugares onde você aparece.",
+      "benefit": "As pessoas reconhecem você antes de ler seu nome."
+    },
+    "matchday": {
+      "name": "Artes de matchday",
+      "summary": "Anúncios, escalações e resultados desenhados para o ritmo do jogo e prontos enquanto o momento ainda está vivo.",
+      "benefit": "Cada dia de jogo soma à sua imagem, com vitória ou não."
+    },
+    "video": {
+      "name": "Vídeos de melhores momentos",
+      "summary": "Suas melhores jogadas editadas em um vídeo que mostra como você joga.",
+      "benefit": "Olheiros, treinadores e empresários avaliam você em minutos."
+    },
+    "content": {
+      "name": "Criação de conteúdo esportivo",
+      "summary": "Fotos, vídeos curtos e histórias planejados em torno da sua temporada.",
+      "benefit": "Sempre há algo que vale a pena publicar."
+    },
+    "marketing": {
+      "name": "Marketing digital",
+      "summary": "Campanhas que levam seu nome além de quem já segue você.",
+      "benefit": "Você alcança clubes, patrocinadores e imprensa, não só torcedores."
+    },
+    "social": {
+      "name": "Estratégia de redes sociais",
+      "summary": "Um plano do que publicar, quando e por quê.",
+      "benefit": "Seus perfis continuam trabalhando pela sua carreira entre um jogo e outro."
+    }
+  },
+  "platform": {
+    "discover": {
+      "name": "Discover Athletes",
+      "text": "Uma vitrine pública dos atletas que trabalham com a Stars Media, com busca por posição, nacionalidade e clube."
+    },
+    "profiles": {
+      "name": "Athlete Profiles",
+      "text": "Uma página profissional para cada atleta — um currículo esportivo digital com link próprio, publicado somente com a autorização do atleta."
+    },
+    "portfolio": {
+      "name": "Athlete Portfolio",
+      "text": "Vídeos, fotos, artes e estatísticas verificadas em um só lugar, prontos para enviar a empresários, treinadores e clubes."
+    },
+    "media": {
+      "name": "Media Center",
+      "text": "Guias gratuitos sobre branding, redes sociais e como apresentar uma carreira no futebol."
+    },
+    "dashboard": {
+      "name": "Athlete Dashboard",
+      "text": "Uma área privada para clientes: solicitações, materiais entregues e histórico de projetos."
+    }
+  },
+  "home": {
+    "hero": {
+      "line1": "Seu talento.",
+      "line2": "Nossa estratégia.",
+      "sub": "Construímos visibilidade, fortalecemos a marca de atletas e criamos oportunidades além do campo.",
+      "secondary": "Ver os trabalhos",
+      "photoAlt": "Jogador de futebol de uniforme branco, braços cruzados, olhando para a câmera"
+    },
+    "intro": {
+      "text": "A Stars Media é uma agência de marketing esportivo construída em torno do atleta. Criamos as artes, definimos a identidade e planejamos o conteúdo que mostram um jogador no seu verdadeiro nível — para a torcida, para os clubes e para quem decide carreiras.",
+      "link": "Sobre a agência"
+    },
+    "services": {
+      "title": "Sete formas de trabalhar a sua imagem",
+      "closing": "Encontre a solução certa para a sua carreira.",
+      "link": "Ver todos os serviços"
+    },
+    "work": {
+      "title": "Trabalhos selecionados",
+      "note": "Quadros de demonstração. Os projetos reais estão sendo preparados para publicação.",
+      "link": "Abrir o portfólio"
+    },
+    "platform": {
+      "title": "Uma plataforma que trabalha pelo atleta",
+      "text": "Além da agência, a Stars Media está construindo ferramentas que o próprio jogador pode usar.",
+      "note": "Essas áreas abrem nas próximas fases do site.",
+      "photoAlt": "Jogador de futebol de uniforme branco olhando para a câmera"
+    },
+    "cta": {
+      "title": "Sua trajetória merece a apresentação certa.",
+      "text": "Conte em que ponto da carreira você está e onde quer ser visto."
+    }
+  },
+  "about": {
+    "title": "Trabalhamos a forma como o futebol enxerga você.",
+    "lead": "O talento se decide dentro de campo. Ser notado depende de como esse talento é apresentado. A Stars Media existe para essa segunda parte.",
+    "photoAlt": "Jogador de futebol de costas, segurando os ombros da camisa com o número 6",
+    "positioningTitle": "Posicionamento",
+    "positioning": "Uma agência internacional de marketing esportivo focada em atletas — não em ligas ou patrocinadores. Tudo o que produzimos parte de uma pergunta: o que este jogador precisa que as pessoas vejam?",
+    "missionTitle": "Missão",
+    "mission": "Dar a atletas em qualquer fase da carreira a apresentação, a visibilidade e as ferramentas normalmente reservadas a poucos no topo.",
+    "storyTitle": "Nossa história",
+    "story": "",
+    "howTitle": "Como trabalhamos",
+    "steps": {
+      "understand": {
+        "name": "Entender",
+        "text": "Começamos por você: posição, momento da carreira, objetivos e o público que precisa alcançar."
+      },
+      "define": {
+        "name": "Definir",
+        "text": "Estabelecemos a identidade — o visual, o tom e a história que seus perfis vão contar."
+      },
+      "produce": {
+        "name": "Produzir",
+        "text": "Artes, peças de matchday, vídeos e conteúdo são criados dentro dessa identidade."
+      },
+      "publish": {
+        "name": "Publicar",
+        "text": "Planejamos o que sai e quando, e ajustamos conforme a resposta das pessoas."
+      }
+    },
+    "valuesTitle": "O que defendemos",
+    "values": "Performance. Exclusividade. Inovação. Ambição. Credibilidade. Alcance internacional. Excelência esportiva.",
+    "ctaTitle": "Vamos construir a sua identidade profissional."
+  },
+  "servicesPage": {
+    "title": "Encontre a solução certa para a sua carreira.",
+    "lead": "Cada atleta está em um ponto diferente. Combinamos os serviços que fazem sentido para o seu, sem forçar nada em um pacote fixo.",
+    "benefitLabel": "Para o atleta",
+    "noteTitle": "Como contratar",
+    "note": "Cada solução é montada para o atleta, por isso apresentamos opções e valores em conversa. Conte o seu momento e mostramos o que se encaixa.",
+    "ctaTitle": "Vamos construir a sua identidade profissional."
+  },
+  "portfolioPage": {
+    "title": "Portfólio",
+    "lead": "Artes, peças de matchday, branding e vídeo feitos para atletas.",
+    "notice": "Os quadros abaixo são demonstrações. Os projetos reais estão sendo preparados para publicação, cada um com a autorização do atleta.",
+    "filter": "Filtrar por categoria",
+    "empty": "Ainda não há nada nesta categoria.",
+    "categories": {
+      "all": "Todos",
+      "graphics": "Sports Graphics",
+      "matchday": "Matchday",
+      "branding": "Athlete Branding",
+      "video": "Highlight Videos",
+      "special": "Special Projects"
+    },
+    "items": {
+      "presentation": "Apresentação de jogador",
+      "portrait": "Retrato de matchday",
+      "identity": "Estudo de identidade",
+      "cover": "Capa de melhores momentos",
+      "number": "Revelação de número",
+      "celebration": "Série de comemoração"
+    },
+    "alts": {
+      "presentation": "Jogador de futebol de braços cruzados olhando para a câmera",
+      "portrait": "Jogador de futebol olhando para baixo, com a mão no pescoço",
+      "identity": "Jogador de futebol de braços cruzados sobre o escudo do clube",
+      "cover": "Jogador de futebol de olhos fechados apontando para cima, em preto e branco",
+      "number": "Jogador de futebol de costas mostrando o número 6",
+      "celebration": "Jogador de futebol fazendo um gesto de comemoração com as duas mãos"
+    }
+  },
+  "athletesPage": {
+    "title": "Discover Athletes",
+    "lead": "Uma vitrine pública dos atletas que trabalham com a Stars Media, feita para que clubes, treinadores e empresários os encontrem.",
+    "status": "Abre na próxima fase",
+    "profileTitle": "O que cada perfil vai mostrar",
+    "profile": {
+      "identity": "Nome, nacionalidade, idade, posição e clube atual",
+      "history": "Histórico esportivo e características de jogo",
+      "stats": "Estatísticas verificadas, cada uma com a sua fonte",
+      "media": "Fotos e vídeos de melhores momentos",
+      "contact": "Informações de contato autorizadas"
+    },
+    "rulesTitle": "Publicado com consentimento",
+    "rules": "Um perfil só vai ao ar com a autorização registrada do atleta. Para menores de 18 anos, é exigida a autorização do responsável.",
+    "ctaTitle": "Quer o seu perfil entre os primeiros?",
+    "photoAlt": "Jogador de futebol olhando para baixo, com a mão no pescoço"
+  },
+  "mediaPage": {
+    "title": "Media Center",
+    "lead": "Uma central gratuita de conhecimento para ajudar atletas a construir sua presença.",
+    "status": "Primeiros artigos em preparação",
+    "categories": {
+      "branding": {
+        "name": "Athlete Branding",
+        "text": "O que é uma marca pessoal e como começar a sua."
+      },
+      "marketing": {
+        "name": "Sports Marketing",
+        "text": "Como a visibilidade se transforma em oportunidades."
+      },
+      "image": {
+        "name": "Personal Image",
+        "text": "Fotos, postura e o que seus perfis dizem sobre você."
+      },
+      "social": {
+        "name": "Social Media",
+        "text": "O que publicar, com que frequência e o que evitar."
+      },
+      "career": {
+        "name": "Football Career",
+        "text": "Testes, empresários, transferências e as decisões em torno deles."
+      },
+      "portfolio": {
+        "name": "Professional Portfolio",
+        "text": "Como montar um material que os clubes realmente assistem."
+      }
+    },
+    "ctaTitle": "Tem um assunto que você quer ver por aqui?"
+  },
+  "contactPage": {
+    "title": "Vamos falar sobre a sua carreira.",
+    "lead": "Conte quem você é e do que precisa. Respondemos por e-mail ou WhatsApp.",
+    "channelsTitle": "Canais diretos",
+    "email": "E-mail",
+    "whatsapp": "WhatsApp",
+    "instagram": "Instagram",
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "role": "Você é",
+      "roles": {
+        "athlete": "Atleta",
+        "family": "Familiar ou empresário de atleta",
+        "club": "Clube ou organização",
+        "other": "Outro"
+      },
+      "interest": "O que você procura",
+      "unsure": "Ainda não sei",
+      "message": "Mensagem",
+      "messageHint": "Posição, clube, momento da carreira — o que ajudar a gente a entender.",
+      "consent": "Concordo que a Stars Media use estes dados para me responder.",
+      "submit": "Enviar mensagem",
+      "sending": "Enviando…",
+      "success": "Mensagem enviada. Vamos responder para {email}.",
+      "another": "Enviar outra mensagem",
+      "unavailable": "Não foi possível enviar a mensagem. Escreva direto para {email} ou pelo WhatsApp.",
+      "errors": {
+        "name": "Informe o seu nome.",
+        "email": "Informe um e-mail válido.",
+        "message": "Escreva algumas palavras sobre o que você precisa.",
+        "consent": "Marque a caixa para podermos responder."
+      }
+    }
+  },
+  "dashboardPage": {
+    "title": "Área do atleta",
+    "text": "A área privada para clientes da Stars Media — solicitações, materiais entregues e histórico de projetos — abre em uma fase posterior deste site. Até lá, seus projetos são acompanhados diretamente com a nossa equipe.",
+    "cta": "Falar com a equipe",
+    "photoAlt": "Jogador de futebol de braços cruzados sobre o escudo do clube"
+  },
+  "notFound": {
+    "title": "Esta página saiu de campo.",
+    "text": "O endereço não existe ou foi movido."
+  },
+  "footer": {
+    "agency": "Agência",
+    "platform": "Plataforma do atleta",
+    "contact": "Contato",
+    "rights": "© {year} Stars Media. Todos os direitos reservados."
+  }
+}
