@@ -133,8 +133,41 @@
     "positioning": "An international sports marketing agency focused on athletes — not on leagues or sponsors. Everything we produce starts from one question: what does this player need people to see?",
     "missionTitle": "Mission",
     "mission": "To give athletes at every stage of their career the presentation, visibility and tools usually reserved for the few at the top.",
-    "storyTitle": "Our story",
-    "story": "",
+    "story": {
+      "title": "Our story",
+      "tagline": "An idea born from sport. A vision that goes beyond it.",
+      "intro": [
+        "Stars Media was born in 2025 in Goiânia, Goiás, from an initiative rooted in sports design.",
+        "What began as graphics and visual content for athletes quickly grew into a bigger vision: we understood that talent on the pitch needed to be matched by a professional presence off it.",
+        "We saw that many athletes have potential, stories and goals, but don't always have the tools to present their work, build their identity and gain more visibility in the sporting world.",
+        "Stars Media grew out of that realisation."
+      ],
+      "sections": [
+        {
+          "title": "Our evolution",
+          "paragraphs": [
+            "We decided to go beyond visual production and build a sports marketing offer, combining creativity, strategy and communication to strengthen athletes' image.",
+            "Today, our work focuses on building personal brands, producing strategic content and developing athletes' digital presence, connecting their careers to the opportunities that sport can offer.",
+            "Our vision has no borders. We believe an athlete's potential deserves to reach new audiences, wherever they come from."
+          ]
+        },
+        {
+          "title": "Our purpose",
+          "paragraphs": [
+            "We believe a sporting career is also built beyond the touchlines.",
+            "That is why we aim to give athletes more than content: we want to help each of them have an identity, a professional presentation and a digital presence that match their ambitions."
+          ]
+        },
+        {
+          "title": "The future",
+          "paragraphs": [
+            "We are building an agency with a global vision, committed to the evolution of sports marketing and to new possibilities for athletes.",
+            "Every project is a chance to tell a story, strengthen an identity and broaden horizons."
+          ]
+        }
+      ],
+      "closing": "Stars Media. Your talent deserves to be seen."
+    },
     "howTitle": "How we work",
     "steps": {
       "understand": {

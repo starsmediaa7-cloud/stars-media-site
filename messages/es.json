@@ -133,8 +133,41 @@
     "positioning": "Una agencia internacional de marketing deportivo centrada en los deportistas — no en ligas ni en patrocinadores. Todo lo que producimos parte de una pregunta: ¿qué necesita este jugador que la gente vea?",
     "missionTitle": "Misión",
     "mission": "Dar a los deportistas, en cualquier etapa de su carrera, la presentación, la visibilidad y las herramientas que suelen estar reservadas a unos pocos en la cima.",
-    "storyTitle": "Nuestra historia",
-    "story": "",
+    "story": {
+      "title": "Nuestra historia",
+      "tagline": "Una idea que nació del deporte. Una visión que va más allá.",
+      "intro": [
+        "Stars Media nació en 2025 en Goiânia, Goiás, a partir de una iniciativa vinculada al diseño deportivo.",
+        "Lo que empezó con la creación de gráficas y contenido visual para deportistas pronto se convirtió en una visión mayor: entendimos que el talento dentro de la cancha necesitaba ir acompañado de una presencia profesional fuera de ella.",
+        "Vimos que muchos deportistas tienen potencial, historias y objetivos, pero no siempre cuentan con las herramientas para presentar su trabajo, construir su identidad y ganar visibilidad en el ámbito deportivo.",
+        "De esa percepción nació Stars Media."
+      ],
+      "sections": [
+        {
+          "title": "Nuestra evolución",
+          "paragraphs": [
+            "Decidimos ir más allá de la producción visual y desarrollar una propuesta de marketing deportivo, uniendo creatividad, estrategia y comunicación para fortalecer la imagen de los deportistas.",
+            "Hoy, nuestro trabajo se centra en la construcción de marcas personales, la producción de contenido estratégico y el desarrollo de la presencia digital de los deportistas, conectando sus trayectorias con las oportunidades que ofrece el deporte.",
+            "Nuestra visión no tiene fronteras. Creemos que el potencial de un deportista merece llegar a nuevos públicos, sin importar su origen o ubicación."
+          ]
+        },
+        {
+          "title": "Nuestro propósito",
+          "paragraphs": [
+            "Creemos que una carrera deportiva también se construye fuera de las cuatro líneas.",
+            "Por eso buscamos ofrecer a los deportistas más que contenido: queremos ayudar a que cada uno tenga una identidad, una presentación profesional y una presencia digital a la altura de sus ambiciones."
+          ]
+        },
+        {
+          "title": "El futuro",
+          "paragraphs": [
+            "Estamos construyendo una agencia con visión global, comprometida con la evolución del marketing deportivo y con nuevas posibilidades para los deportistas.",
+            "Cada proyecto es una oportunidad para contar una historia, fortalecer una identidad y ampliar horizontes."
+          ]
+        }
+      ],
+      "closing": "Stars Media. Tu talento merece ser visto."
+    },
     "howTitle": "Cómo trabajamos",
     "steps": {
       "understand": {

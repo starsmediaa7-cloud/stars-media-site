@@ -36,7 +36,7 @@ Sem a chave do Resend, o formulário valida os dados mas avisa o visitante para 
 | Cores, vidro, luz, tipografia | `src/app/globals.css` |
 | Logotipo | `public/brand/stars-media-mark.png` (arquivo oficial, só redimensionado) |
 
-A história da agência (About) aparece sozinha quando o campo `about.story` for preenchido nos três arquivos de `messages/`. Enquanto estiver vazio, a seção não é exibida.
+A história da agência (About) fica em `about.story` nos três arquivos de `messages/`: frase de abertura, parágrafos, subtítulos e frase final.
 
 No portfólio, todo item com `demo: true` recebe a etiqueta "Demo". Ao trocar por um projeto real e autorizado, mude para `demo: false`.
 
