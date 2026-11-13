@@ -154,8 +154,8 @@ header .pill{background:var(--volt);color:var(--ink);font-size:13px}
 .plan.mid{background:var(--volt);color:var(--ink);padding-block:44px;box-shadow:0 24px 60px rgba(0,0,0,.35)}
 .plan .rec{position:absolute;top:-16px;right:22px;background:var(--cob);color:var(--bone);transform:rotate(4deg);font-size:14px;box-shadow:0 0 0 3px var(--volt)}
 .plan h3{font-size:34px}
-.price{display:flex;align-items:baseline;gap:8px;font-variant-numeric:tabular-nums}
-.price b{font:italic 900 clamp(52px,5vw,68px)/1 var(--f-display);letter-spacing:-.04em}
+.price{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;font-variant-numeric:tabular-nums;min-width:0}
+.price b{font:italic 900 clamp(48px,4.6vw,66px)/1 var(--f-display);letter-spacing:-.04em;white-space:nowrap}
 .price small{font-size:15px;opacity:.7}
 .plan ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px}
 .plan li{display:grid;grid-template-columns:26px minmax(0,1fr);gap:10px;align-items:start;font-size:15.5px}
@@ -729,7 +729,7 @@ I18N.es = {
 const PRICES = {
   brl: { v: [100, 200, 500], a: [25, 25, 40, 80, 150, 150], f: v => 'R$' + v },
   eur: { v: [15.99, 31.99, 79.99], a: [3.99, 3.99, 6.99, 12.99, 23.99, 23.99], f: v => v.toFixed(2).replace('.', ',') + '€' },
-  usd: { v: [18.99, 36.99, 92.99], a: [4.99, 4.99, 7.99, 14.99, 27.99, 27.99], f: v => 'US$' + v.toFixed(2) },
+  usd: { v: [19, 37, 93], a: [5, 5, 8, 15, 28, 28], f: v => 'US$' + v },
 };
 const LANG_CUR = { br: 'brl', pt: 'eur', en: 'usd', es: 'usd' };
 // athletes: add real entries here as { name, sport, handle, img }
@@ -853,12 +853,29 @@ $('lb-x').addEventListener('click', () => $('lb').hidden = true);
 $('lb').addEventListener('click', e => { if (e.target === $('lb')) $('lb').hidden = true; });
 addEventListener('keydown', e => { if (e.key === 'Escape') $('lb').hidden = true; });
 
+// visitor region: time zone first (where the device is), browser language as fallback
+function detectRegion() {
+  let tz = ''; try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone || ''; } catch (e) {}
+  const nav = (navigator.language || '').toLowerCase();
+  const BR = /^America\/(Sao_Paulo|Araguaina|Bahia|Belem|Boa_Vista|Campo_Grande|Cuiaba|Eirunepe|Fortaleza|Maceio|Manaus|Noronha|Porto_Velho|Recife|Rio_Branco|Santarem)$/;
+  const PT = /^(Europe\/Lisbon|Atlantic\/Azores|Atlantic\/Madeira)$/;
+  const ES = /^(Europe\/Madrid|Atlantic\/Canary|Africa\/Ceuta)$/;
+  const LATAM = /^America\/(Argentina\/.*|Buenos_Aires|Cordoba|Mendoza|Santiago|Punta_Arenas|Bogota|Lima|Caracas|Mexico_City|Cancun|Monterrey|Merida|Chihuahua|Ciudad_Juarez|Mazatlan|Hermosillo|Tijuana|Matamoros|Ojinaga|Bahia_Banderas|Guatemala|El_Salvador|Tegucigalpa|Managua|Costa_Rica|Panama|Havana|Santo_Domingo|Montevideo|Asuncion|La_Paz|Guayaquil)$/;
+  const EURO = /^(Europe\/(Paris|Berlin|Rome|Amsterdam|Brussels|Vienna|Dublin|Helsinki|Athens|Luxembourg|Monaco|Bratislava|Ljubljana|Tallinn|Riga|Vilnius|Malta|Zagreb|Nicosia|San_Marino|Vatican|Andorra|Busingen)|Asia\/(Nicosia|Famagusta))$/;
+  if (BR.test(tz)) return { lang: 'br', cur: 'brl' };
+  if (PT.test(tz)) return { lang: 'pt', cur: 'eur' };
+  if (ES.test(tz)) return { lang: 'es', cur: 'eur' };
+  if (LATAM.test(tz)) return { lang: 'es', cur: 'usd' };
+  const lang = nav.startsWith('pt-pt') ? 'pt' : nav.startsWith('pt') ? 'br' : nav.startsWith('es') ? 'es' : nav ? 'en' : 'br';
+  if (EURO.test(tz)) return { lang, cur: 'eur' };
+  if (!tz) return { lang, cur: LANG_CUR[lang] };
+  return { lang, cur: lang === 'br' ? 'brl' : lang === 'pt' ? 'eur' : 'usd' };
+}
 // boot
 (() => {
-  const saved = store.get('sm-lang');
-  const nav = (navigator.language || 'pt-BR').toLowerCase();
-  LG = I18N[saved] ? saved : nav.startsWith('pt-pt') ? 'pt' : nav.startsWith('pt') ? 'br' : nav.startsWith('es') ? 'es' : nav.startsWith('en') ? 'en' : 'br';
-  CUR = LANG_CUR[LG];
+  const saved = store.get('sm-lang'), geo = detectRegion();
+  LG = I18N[saved] ? saved : geo.lang;
+  CUR = I18N[saved] ? LANG_CUR[LG] : geo.cur;
   applyLang(); route();
 })();
 
