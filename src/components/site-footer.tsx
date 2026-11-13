@@ -3,6 +3,7 @@ import { Link } from "@/i18n/navigation";
 import { links, site } from "@/config/site";
 import { currentYear } from "@/lib/year";
 import { BrandMark } from "./brand-mark";
+import { Wordmark } from "./wordmark";
 import { CornerArc } from "./pitch";
 
 const footerLink =
@@ -19,11 +20,9 @@ export async function SiteFooter() {
 
       <div className="wrap grid gap-12 py-16 md:grid-cols-12 md:py-20">
         <div className="md:col-span-5">
-          <Link href="/" className="inline-flex items-center gap-3 text-chalk">
+          <Link href="/" aria-label={site.name} className="inline-flex items-center gap-3 text-chalk">
             <BrandMark size={30} />
-            <span className="text-[1.125rem] font-medium [font-stretch:118%]">
-              {site.name}
-            </span>
+            <Wordmark className="h-[22px] w-auto" />
           </Link>
           <p className="mt-6 text-[clamp(1.5rem,2.6vw,2.25rem)] font-extralight uppercase leading-tight text-chalk [font-stretch:120%]">
             {t("common.tagline")}

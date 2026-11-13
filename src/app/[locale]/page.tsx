@@ -13,6 +13,7 @@ import { CtaBand } from "@/components/cta-band";
 import { LitPhoto } from "@/components/lit-photo";
 import { Parallax } from "@/components/parallax";
 import { HeroRing } from "@/components/pitch";
+import { Wordmark } from "@/components/wordmark";
 import { PlatformShowcase } from "@/components/platform-showcase";
 
 const delay = (seconds: number) => ({ "--delay": `${seconds}s` }) as CSSProperties;
@@ -107,7 +108,7 @@ export default async function HomePage() {
                 <p className="relative text-[clamp(1.05rem,1.7vw,1.5rem)] font-light uppercase leading-none text-chalk [font-stretch:120%]">
                   {t("common.tagline")}
                 </p>
-                <p className="t-label relative mt-2.5 text-silver">Stars Media</p>
+                <Wordmark className="relative mt-3 h-[13px] w-auto text-silver" />
               </div>
             </Parallax>
           </div>
